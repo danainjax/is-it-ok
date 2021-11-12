@@ -22,6 +22,6 @@
 
 [ ] Your Rails API should handle the data persistence with a database. You should be using fetch() within your actions to GET and POST data from your API - do not use jQuery methods.
 
-[ ] Your client-side application should handle the display of data with minimal data manipulation
+[ ] Your client-side application should handle the display of data with minimal data manipulation. (Serializers and backend should do almost all of the work of getting data)
 
 [ ] Your application should have some minimal styling: feel free to stick to a framework (like react-bootstrap), but if you want to write (additional) CSS yourself, go for it!
