@@ -14,7 +14,7 @@
 
 [ ] There should be 3 routes
 
-[ ] The Application must make use of react-router and proper RESTful routing (should you choose to use react-router v3 please refer to the appropriate docs (Links to an external site.); docs for v4 can be found here (Links to an external site.))
+[ ] The Application must make use of react-router and proper RESTful routing (should you choose to use react-router v3 please refer to the appropriate docs (Links to an external site.); docs for v4 can be found here (Links to an external site.)) see restular.com
 
 [ ] Use Redux middleware to respond to and modify state change
 
