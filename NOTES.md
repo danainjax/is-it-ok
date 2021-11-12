@@ -10,7 +10,7 @@
 
 [ ] There should be 2 container components
 
-[ ] There should be 5 stateless components
+[ ] There should be 5 stateless components- the idea here is to use redux for your state, 5 components connected to your redux store for your state
 
 [ ] There should be 3 routes
 
