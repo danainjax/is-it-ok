@@ -24,7 +24,7 @@ class App extends Component {
           textAlign: 'left',
         }}
       >
-        <h1>is-it-ok </h1>
+        <h1>movie safe</h1>
         User: <User name={this.state.name} />
       </div>
     )
