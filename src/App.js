@@ -18,9 +18,9 @@ class App extends Component {
     return (
       <div
         style={{
-          backgroundColor: 'green',
+          backgroundColor: '#3a539b',
           color: 'white',
-          fontFamily: 'Indie Flower',
+          fontFamily: 'Raleway',
           textAlign: 'left',
         }}
       >
