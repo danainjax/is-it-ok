@@ -1,3 +1,5 @@
+Changed file names to movie-safe-client
+
 # Requirements [ 3/12 ]
 
 [ ] The code should be written in ES6 as much as possible
