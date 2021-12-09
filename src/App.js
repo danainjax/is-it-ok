@@ -6,7 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      name: 'Phineas',
+      name: '',
     }
   }
   componentDidMount() {
@@ -15,6 +15,7 @@ class App extends Component {
       .then((data) => this.setState({ name: data[0].name }))
   }
   render() {
+    console.log(this.state.name)
     return (
       <div
         style={{

@@ -1,6 +1,4 @@
-Changed file names to movie-safe-client
-
-# Requirements [ 3/12 ]
+# Requirements [ 5/12 ]
 
 [ ] The code should be written in ES6 as much as possible
 
@@ -10,9 +8,17 @@ Changed file names to movie-safe-client
 
 [X] Your app should have one HTML page to render your react-redux application
 
-[ ] There should be 2 container components
+[X] There should be 2 container components
+1-MoviesList
+2-ReviewsList
+3-Account
 
-[ ] There should be 5 stateless components- the idea here is to use redux for your state, 5 components connected to your redux store for your state
+[X] There should be 5 stateless components- the idea here is to use redux for your state, 5 components connected to your redux store for your state
+1-User
+2-Review
+3-ReviewForm
+4-Movie
+5-UserForm
 
 [ ] There should be 3 routes
 
