@@ -4,11 +4,18 @@ Added API Key for IMDB to .env file and added .env to .gitignore
 
 [ ] The code should be written in ES6 as much as possible
 
+- Arrow syntax =>
+- Destructuring - destructure your variables (props)
+
 [X] Use the create-react-app generator to start your project.
 
 [X] Follow the instructions on this repo to setup the generator: create-react-app (Links to an external site.)
 
 [X] Your app should have one HTML page to render your react-redux application
+
+- Single Page Application
+- Page should not refresh
+- URL can change using router
 
 [X] There should be 2 container components
 1-MoviesList
@@ -22,9 +29,9 @@ Added API Key for IMDB to .env file and added .env to .gitignore
 4-Movie
 5-UserForm
 
-[ ] There should be 3 routes
+[ ] There should be 3 routes, good rule for back end and your front end
 
-[ ] The Application must make use of react-router and proper RESTful routing (should you choose to use react-router v3 please refer to the appropriate docs (Links to an external site.); docs for v4 can be found here (Links to an external site.)) see restular.com
+[ ] The Application must make use of react-router and proper RESTful routing (should you choose to use react-router v3 please refer to the appropriate docs (Links to an external site.); docs for v4 can be found here (Links to an external site.)) \*see restular.com
 
 [ ] Use Redux middleware to respond to and modify state change
 
