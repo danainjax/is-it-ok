@@ -1,5 +1,7 @@
 # Requirements [ 5/12 ]
 
+Added API Key for IMDB to .env file and added .env to .gitignore
+
 [ ] The code should be written in ES6 as much as possible
 
 [X] Use the create-react-app generator to start your project.
