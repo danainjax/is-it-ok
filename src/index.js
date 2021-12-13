@@ -5,7 +5,6 @@ import App from './App'
 import MovieList from './components/containers/MovieList'
 import { Provider } from 'react-redux'
 import MovieReducer from './reducers/MovieReducer'
-
 import thunk from 'redux-thunk'
 
 const allReducers = combineReducers({ movieStore: MovieReducer })
@@ -15,7 +14,6 @@ const store = createStore(allReducers, applyMiddleware(thunk))
 ReactDOM.render(
   <Provider store={store}>
     <App />
-    <MovieList />
   </Provider>,
   document.getElementById('root')
 )

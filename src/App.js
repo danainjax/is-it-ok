@@ -1,29 +1,26 @@
 import './style.css'
 import React, { Component } from 'react'
-import User from './components/User'
+// import User from './components/User'
 import MovieList from './components/containers/MovieList'
-import { fetchInTheaters } from './actions/MovieActions'
 import { connect } from 'react-redux'
+import { fetchInTheaters } from './actions/MovieActions'
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      name: '',
-    }
+  // componentDidMount() {
+  //   this.props.fetchInTheaters()
+  // }
+  getMovies = () => {
+    this.props.fetchInTheaters()
   }
-  componentDidMount() {
-    fetch('http://localhost:3000/users')
-      .then((response) => response.json())
-      .then((data) => this.setState({ name: data[0].name }))
-  }
+
   render() {
-    console.log(this.state.name)
+    console.log(this.props)
     return (
       <div>
         <h1>movie safe</h1>
-        User: <User name={this.state.name} />
-        <MovieList movies={this.props} />
+        {/* User: <User name={this.state.name} /> */}
+        <button onClick={() => this.getMovies()}>NOW PLAYING</button>
+        <MovieList movies={this.props.movielist} />
       </div>
     )
   }
