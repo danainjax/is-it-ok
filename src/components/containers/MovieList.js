@@ -1,9 +1,11 @@
-// const apiKey = process.env.REACT_APP_IMDB_API_KEY
+import Movie from '../Movie'
+
 function MovieList(props) {
-  return (
-    <div>
-      <h1>Movie List</h1>
-    </div>
-  )
+  console.log(props, 'props in Movie')
+  const movies = props.movies.map((movie) => {
+    return <Movie key={movie.id} title={movie.title} image={movie.image} />
+  })
+  return <div>{movies}</div>
 }
+
 export default MovieList

@@ -1,6 +1,9 @@
 import './style.css'
 import React, { Component } from 'react'
 import User from './components/User'
+import MovieList from './components/containers/MovieList'
+import { fetchInTheaters } from './actions/MovieActions'
+import { connect } from 'react-redux'
 
 class App extends Component {
   constructor(props) {
@@ -17,19 +20,17 @@ class App extends Component {
   render() {
     console.log(this.state.name)
     return (
-      <div
-        style={{
-          backgroundColor: '#3a539b',
-          color: 'white',
-          fontFamily: 'Raleway',
-          textAlign: 'left',
-        }}
-      >
+      <div>
         <h1>movie safe</h1>
         User: <User name={this.state.name} />
+        <MovieList movies={this.props} />
       </div>
     )
   }
 }
 
-export default App
+const mapStateToProps = (state) => ({
+  movielist: state.movieStore.movies,
+})
+
+export default connect(mapStateToProps, { fetchInTheaters })(App)
