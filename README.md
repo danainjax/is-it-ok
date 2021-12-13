@@ -1,6 +1,6 @@
 # movie safe
 
-Reviews for parents and kids. Check and see if 'it is ok' to watch.
+Reviews for parents and kids. Check and see if the movie is safe to watch.
 
 Front end in React.
 
