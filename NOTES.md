@@ -1,6 +1,13 @@
-# Requirements [ 5/12 ]
+Build notes:
+[1] Display the now playing movies to the page
+[2] Hook up the redux store and action creator
+[3] Use thunk, add the middleware
 
-Added API Key for IMDB to .env file and added .env to .gitignore
+\*Then, work more on api and what data we are pulling thru.
+1 - Need capability to search for a movie, Build search bar.
+Movies in the last three months are priority/current movies or movies in the last year.
+
+# Requirements [ 5/12 ]
 
 [ ] The code should be written in ES6 as much as possible
 
