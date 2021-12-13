@@ -1,0 +1,41 @@
+.card {
+  border: 2px solid #e7e7e7;
+
+  border-radius: 4px;
+
+  padding: 0.5rem;
+}
+
+div {
+  background-color: #3a539b;
+  color: white;
+  text-align: left;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* see notes below */
+  grid-gap: 2em;
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+  border-radius: 10px 10px 0 0;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 10px 20px;
+}
+
+body {
+  font-family: Raleway;
+}

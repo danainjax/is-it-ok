@@ -1,4 +1,4 @@
-import './App.css'
+import './style.css'
 import React, { Component } from 'react'
 import User from './components/User'
 

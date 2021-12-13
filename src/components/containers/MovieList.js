@@ -1,14 +1,7 @@
 // const apiKey = process.env.REACT_APP_IMDB_API_KEY
 function MovieList(props) {
   return (
-    <div
-      style={{
-        backgroundColor: '#3a539b',
-        color: 'white',
-        fontFamily: 'Raleway',
-        textAlign: 'left',
-      }}
-    >
+    <div>
       <h1>Movie List</h1>
     </div>
   )
