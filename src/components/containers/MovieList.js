@@ -2,18 +2,9 @@ import React, { Component } from 'react'
 const apiKey = process.env.REACT_APP_IMDB_API_KEY
 class MovieList extends Component {
   constructor(props) {
-    super(props)
-    this.state = {
-      title: [],
-      trailer: [],
-      poster: [],
-    }
+    super()
   }
-  componentDidMount() {
-    fetch(`https://imdb-api.com/en/API/InTheaters/` + apiKey)
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-  }
+
   render() {
     return (
       <div
@@ -24,7 +15,7 @@ class MovieList extends Component {
           textAlign: 'left',
         }}
       >
-        <h1>Movies</h1>
+        <h1>Movie List</h1>
       </div>
     )
   }
