@@ -6,3 +6,10 @@ export const fetchInTheaters = () => {
         dispatch({ type: 'FETCH_IN_THEATERS', payload: movies })
       )
 }
+
+export const mostPopular = () => {
+  return (dispatch) =>
+    fetch('https://localhost:3000/popular')
+      .then((resp) => resp.json())
+      .then((movies) => dispatch({ type: 'MOST_POPULAR', payload: movies }))
+}
