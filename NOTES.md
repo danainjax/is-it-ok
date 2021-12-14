@@ -1,5 +1,10 @@
 Build notes:
 [1] Container components need to be connected to the redux store.
+[2] Nav bar, start with one link
+[3] onClick on movie card take to a page with more info on the movie, (show page)
+[4] Build a review model/form - remember key categories to include in the review: Violence, Sex, Language, etc.
+[5] Will need to build a login at this point
+[6] Associate the reviews to the movie through the user model
 
 \*Then, work more on api and what data we are pulling thru.
 1 - Need capability to search for a movie, Build search bar.
