@@ -5,6 +5,8 @@ Build notes:
 [4] Build a review model/form - remember key categories to include in the review: Violence, Sex, Language, etc.
 [5] Will need to build a login at this point
 [6] Associate the reviews to the movie through the user model
+[7] Create an icon for the browser for movie safe
+[8] Create a logo for movie safe on Canva
 
 \*Then, work more on api and what data we are pulling thru.
 1 - Need capability to search for a movie, Build search bar.
