@@ -1,4 +1,5 @@
 Build notes:
+[a] Add serializers to serve only the data we need
 [1] Container components need to be connected to the redux store.
 [2] Nav bar, start with one link
 [3] onClick on movie card take to a page with more info on the movie, (show page)

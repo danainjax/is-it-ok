@@ -1,9 +1,8 @@
-export default function MovieReducer(
-  state = {
-    movies: [],
-  },
-  action
-) {
+const initialState = {
+  movies: [],
+}
+
+export default function MovieReducer(state = initialState, action) {
   switch (action.type) {
     case 'FETCH_IN_THEATERS':
       return {
@@ -11,6 +10,6 @@ export default function MovieReducer(
         movies: action.payload,
       }
     default:
-      return state
+      return { ...state }
   }
 }
