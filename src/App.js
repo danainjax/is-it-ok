@@ -6,12 +6,12 @@ import { connect } from 'react-redux'
 import { fetchInTheaters } from './actions/MovieActions'
 
 class App extends Component {
-  // componentDidMount() {
-  //   this.props.fetchInTheaters()
-  // }
-  getMovies = () => {
+  componentDidMount() {
     this.props.fetchInTheaters()
   }
+  // getMovies = () => {
+  //   this.props.fetchInTheaters()
+  // }
 
   render() {
     console.log(this.props)
@@ -19,7 +19,7 @@ class App extends Component {
       <div>
         <h1>movie safe</h1>
         {/* User: <User name={this.state.name} /> */}
-        <button onClick={() => this.getMovies()}>NOW PLAYING</button>
+        {/* <button onClick={() => this.getMovies()}>NOW PLAYING</button> */}
         <MovieList movies={this.props.movielist} />
       </div>
     )
