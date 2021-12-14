@@ -5,6 +5,7 @@ import App from './App'
 import { Provider } from 'react-redux'
 import MovieReducer from './reducers/MovieReducer'
 import thunk from 'redux-thunk'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const allReducers = combineReducers({ movieStore: MovieReducer })
 

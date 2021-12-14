@@ -20,7 +20,7 @@ function MovieList(props) {
       />
     )
   })
-  return <div>{movies}</div>
+  return <div className='cards'>{movies}</div>
 }
 
 export default MovieList
