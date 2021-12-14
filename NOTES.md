@@ -1,13 +1,11 @@
 Build notes:
-[1] Display the now playing movies to the page
-[2] Hook up the redux store and action creator
-[3] Use thunk, add the middleware
+[1] Container components need to be connected to the redux store.
 
 \*Then, work more on api and what data we are pulling thru.
 1 - Need capability to search for a movie, Build search bar.
 Movies in the last three months are priority/current movies or movies in the last year.
 
-# Requirements [ 5/12 ]
+# Requirements [ 8/12 ]
 
 [ ] The code should be written in ES6 as much as possible
 
@@ -40,11 +38,11 @@ Movies in the last three months are priority/current movies or movies in the las
 
 [ ] The Application must make use of react-router and proper RESTful routing (should you choose to use react-router v3 please refer to the appropriate docs (Links to an external site.); docs for v4 can be found here (Links to an external site.)) \*see restular.com
 
-[ ] Use Redux middleware to respond to and modify state change
+[X] Use Redux middleware to respond to and modify state change
 
-[ ] Make use of async actions and redux-thunk middleware to send data to and receive data from a server. Put fetches in your action creators. Components should not be doing your fetch, your props that you get from map dispatch to props should be doing your fetch, can only be done with thunk.
+[X] Make use of async actions and redux-thunk middleware to send data to and receive data from a server. Put fetches in your action creators. Components should not be doing your fetch, your props that you get from map dispatch to props should be doing your fetch, can only be done with thunk.
 
-[ ] Your Rails API should handle the data persistence with a database. You should be using fetch() within your actions to GET and POST data from your API - do not use jQuery methods.
+[X] Your Rails API should handle the data persistence with a database. You should be using fetch() within your actions to GET and POST data from your API - do not use jQuery methods.
 
 [ ] Your client-side application should handle the display of data with minimal data manipulation. (Serializers and backend should do almost all of the work of getting data. model methods, waiter should not be platng your food. Use serializers.)
 
