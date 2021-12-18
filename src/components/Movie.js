@@ -1,20 +1,32 @@
-function Movie(props) {
-  console.log(props)
+function Movie({
+  id,
+  image,
+  title,
+  releaseDate,
+  contentRating,
+  runtime,
+  plot,
+  stars,
+  genres,
+  year,
+  director,
+}) {
   return (
     <>
       <div className='card'>
-        <img src={props.image} alt={props.title} />
+        <img src={image} alt={title} />
         <div className='container'>
-          <p>{props.releaseDate}</p>
+          <p>{releaseDate}</p>
           <h4>
-            <b>{props.title}</b>
-            <p>{props.contentRating}</p>
-            <p>{props.runtime}</p>
+            <b>{title}</b>
+            <p>{contentRating}</p>
+            <p>{runtime}</p>
           </h4>
-          <p>{props.plot}</p>
+          <p>{plot}</p>
           <ul>
-            <li>{props.stars}</li>
-            <li>{props.genres}</li>
+            <li>{year}</li>
+            <li>{stars}</li>
+            <li>{genres}</li>
           </ul>
         </div>
       </div>

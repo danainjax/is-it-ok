@@ -13,3 +13,8 @@ export const mostPopular = () => {
       .then((resp) => resp.json())
       .then((movies) => dispatch({ type: 'MOST_POPULAR', payload: movies }))
 }
+
+// work on a fetch to a route that will show the individual movie trailer
+// export const trailer = () => {
+//   return (dispatch) => fetch('')
+// }

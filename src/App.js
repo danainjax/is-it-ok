@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import MovieList from './components/containers/MovieList'
 import { connect } from 'react-redux'
 import { fetchInTheaters } from './actions/MovieActions'
+import { SearchBar } from './components/SearchBar'
 
 class App extends Component {
   componentDidMount() {
@@ -18,6 +19,9 @@ class App extends Component {
     return (
       <div>
         <h1>movie safe</h1>
+        <SearchBar />
+        <p></p>
+
         {/* User: <User name={this.state.name} /> */}
         {/* <button onClick={() => this.getMovies()}>NOW PLAYING</button> */}
         <MovieList movies={this.props.movielist} />
