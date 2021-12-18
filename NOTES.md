@@ -15,7 +15,7 @@ Movies in the last three months are priority/current movies or movies in the las
 
 # Requirements [ 8/12 ]
 
-[ ] The code should be written in ES6 as much as possible
+[X] The code should be written in ES6 as much as possible
 
 - Arrow syntax =>
 - Destructuring - destructure your variables (props)
@@ -31,7 +31,7 @@ Movies in the last three months are priority/current movies or movies in the las
 - URL can change using router
 
 [X] There should be 2 container components
-1-MoviesList
+[X] 1-MoviesList
 2-ReviewsList
 3-Account
 
@@ -39,8 +39,9 @@ Movies in the last three months are priority/current movies or movies in the las
 1-User
 2-Review
 3-ReviewForm
-4-Movie
+[X] 4-Movie
 5-UserForm
+[X] 6-SearhBar
 
 [ ] There should be 3 routes, good rule for back end and your front end
 
@@ -52,6 +53,6 @@ Movies in the last three months are priority/current movies or movies in the las
 
 [X] Your Rails API should handle the data persistence with a database. You should be using fetch() within your actions to GET and POST data from your API - do not use jQuery methods.
 
-[ ] Your client-side application should handle the display of data with minimal data manipulation. (Serializers and backend should do almost all of the work of getting data. model methods, waiter should not be platng your food. Use serializers.)
+[X] Your client-side application should handle the display of data with minimal data manipulation. (Serializers and backend should do almost all of the work of getting data. model methods, waiter should not be platng your food. Use serializers.)
 
-[ ] Your application should have some minimal styling: feel free to stick to a framework (like react-bootstrap), but if you want to write (additional) CSS yourself, go for it!
+[X] Your application should have some minimal styling: feel free to stick to a framework (like react-bootstrap), but if you want to write (additional) CSS yourself, go for it!
