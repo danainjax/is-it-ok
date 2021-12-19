@@ -1,6 +1,5 @@
 Build notes:
-[a] Add serializers to serve only the data we need
-[1] Container components need to be connected to the redux store.
+[1] Add serializers to serve only the data we need, implement React Router
 [2] Nav bar, start with one link
 [3] onClick on movie card take to a page with more info on the movie, (show page)
 [4] Build a review model/form - remember key categories to include in the review: Violence, Sex, Language, etc.
@@ -31,17 +30,17 @@ Movies in the last three months are priority/current movies or movies in the las
 - URL can change using router
 
 [X] There should be 2 container components
-[X] 1-MoviesList
-2-ReviewsList
+[X] 1-MovieList connected to Redux store
+2-ReviewList
 3-Account
 
 [X] There should be 5 stateless components- the idea here is to use redux for your state, 5 components connected to your redux store for your state
 1-User
 2-Review
 3-ReviewForm
-[X] 4-Movie
+[X] 4-MovieCard - connected to MovieList
 5-UserForm
-[X] 6-SearhBar
+[X] 6-SearchBar
 
 [ ] There should be 3 routes, good rule for back end and your front end
 
