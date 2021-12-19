@@ -1,9 +1,9 @@
 import './style.css'
 import React, { Component } from 'react'
 // import User from './components/User'
-import MovieList from './components/containers/MovieList'
+import MovieList from './containers/MovieList'
 import { connect } from 'react-redux'
-import { fetchInTheaters } from './actions/MovieActions'
+import { fetchInTheaters } from './redux/actions/MovieActions'
 import { SearchBar } from './components/SearchBar'
 
 class App extends Component {
