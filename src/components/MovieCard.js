@@ -1,4 +1,4 @@
-function Movie({
+function MovieCard({
   id,
   image,
   title,
@@ -24,9 +24,10 @@ function Movie({
           </h4>
           <p>{plot}</p>
           <ul>
-            <li>{year}</li>
-            <li>{stars}</li>
-            <li>{genres}</li>
+            <li>{year ? year : 'Hello'}</li>
+            <li>{director ? director : 'Director'}</li>
+            <li>{stars ? stars : 'Starring'}</li>
+            <li>{genres ? genres : 'genres'}</li>
           </ul>
         </div>
       </div>
@@ -34,4 +35,4 @@ function Movie({
   )
 }
 
-export default Movie
+export default MovieCard

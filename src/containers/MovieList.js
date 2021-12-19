@@ -1,26 +1,22 @@
-import Movie from '../components/Movie'
+import MovieCard from '../components/MovieCard'
+import { fetchInTheaters } from '../redux/actions/MovieActions'
+import { connect } from 'react-redux'
+import { useEffect } from 'react'
 
-function MovieList(props) {
-  console.log(props, 'props in Movie')
-  const movies = props.movies.map((movie) => {
-    return (
-      <Movie
-        key={movie.id}
-        title={movie.title}
-        image={movie.image}
-        plot={movie.plot}
-        year={movie.year}
-        stars={movie.stars}
-        runtime={movie.runtime}
-        releaseDate={movie.releaseDate}
-        contentRating={movie.contentRating}
-        genres={movie.genres}
-        director={movie.director}
-        full_title={movie.full_title}
-      />
-    )
-  })
-  return <div className='cards'>{movies}</div>
+function MovieList({ fetchInTheaters, movielist }) {
+  useEffect(fetchInTheaters, [fetchInTheaters])
+  console.log(movielist)
+  return (
+    <div className='cards'>
+      {movielist.map((movie) => (
+        <MovieCard {...movie} key={movie.id} />
+      ))}
+    </div>
+  )
 }
 
-export default MovieList
+const mapStateToProps = (state) => {
+  return { movielist: state.movieStore.movies }
+}
+
+export default connect(mapStateToProps, { fetchInTheaters })(MovieList)
