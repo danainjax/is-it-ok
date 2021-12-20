@@ -1,4 +1,5 @@
 Build notes:
+[a] Make cards smaller and picture resolution more crisp.
 [1] Add serializers to serve only the data we need, implement React Router
 [2] Nav bar, start with one link
 [3] onClick on movie card take to a page with more info on the movie, (show page)

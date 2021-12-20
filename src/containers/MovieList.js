@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 
 function MovieList({ fetchInTheaters, movielist }) {
   useEffect(fetchInTheaters, [fetchInTheaters])
+  //dependency, useEffect will run fetchInTheaters if fetchInTheaters changes
   console.log(movielist)
   return (
     <div className='cards'>
