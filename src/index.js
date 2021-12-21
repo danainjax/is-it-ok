@@ -4,11 +4,15 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import App from './App'
 import { Provider } from 'react-redux'
 import MovieReducer from './redux/reducers/MovieReducer'
+import AccountReducer from './redux/reducers/AccountReducer'
 import thunk from 'redux-thunk'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter as Router } from 'react-router-dom'
 
-const allReducers = combineReducers({ movieStore: MovieReducer })
+const allReducers = combineReducers({
+  movieStore: MovieReducer,
+  users: AccountReducer,
+})
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 

@@ -1,7 +1,11 @@
-import React, { Component } from 'react'
-
-export default class User extends Component {
-  render() {
-    return <div>{this.props.name} User/account page</div>
-  }
+function User({ id, name, email, city, state }) {
+  return (
+    <>
+      <h3>{name}</h3>
+      <p>{email}</p>
+      <h5>{city}</h5>
+    </>
+  )
 }
+
+export default User

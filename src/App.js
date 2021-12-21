@@ -4,7 +4,7 @@ import MovieList from './containers/MovieList'
 import { SearchBar } from './components/SearchBar'
 import { Switch, Route } from 'react-router-dom'
 import MovieShow from './containers/MovieShow'
-import User from './components/User'
+import Users from './containers/Users'
 
 class App extends Component {
   render() {
@@ -20,8 +20,8 @@ class App extends Component {
             <MovieList />
             MovieList
           </Route>
-          <Route path='/account'>
-            <User />
+          <Route path='/users'>
+            <Users />
           </Route>
         </Switch>
 
