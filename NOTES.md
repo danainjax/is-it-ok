@@ -1,6 +1,5 @@
 Build notes:
 [a] Make cards smaller and picture resolution more crisp.
-[1] Add serializers to serve only the data we need, implement React Router
 [2] Nav bar, start with one link
 [3] onClick on movie card take to a page with more info on the movie, (show page)
 [4] Build a review model/form - remember key categories to include in the review: Violence, Sex, Language, etc.
@@ -43,9 +42,12 @@ Movies in the last three months are priority/current movies or movies in the las
 5-UserForm
 [X] 6-SearchBar
 
-[ ] There should be 3 routes, good rule for back end and your front end
+[X] There should be 3 routes, good rule for back end and your front end
+/movies
+/movies/:id
+/account
 
-[ ] The Application must make use of react-router and proper RESTful routing (should you choose to use react-router v3 please refer to the appropriate docs (Links to an external site.); docs for v4 can be found here (Links to an external site.)) \*see restular.com
+[X] The Application must make use of react-router and proper RESTful routing (should you choose to use react-router v3 please refer to the appropriate docs (Links to an external site.); docs for v4 can be found here (Links to an external site.)) \*see restular.com
 
 [X] Use Redux middleware to respond to and modify state change
 
