@@ -45,7 +45,7 @@ Movies in the last three months are priority/current movies or movies in the las
 [X] There should be 3 routes, good rule for back end and your front end
 /movies
 /movies/:id
-/account
+/users => need to configure this to be an account route like /login or /account or /user (with slug)
 
 [X] The Application must make use of react-router and proper RESTful routing (should you choose to use react-router v3 please refer to the appropriate docs (Links to an external site.); docs for v4 can be found here (Links to an external site.)) \*see restular.com
 
