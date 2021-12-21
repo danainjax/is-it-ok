@@ -1,4 +1,6 @@
 Build notes:
+_- Build nav bar
+_- Build Movie Show page
 [a] Make cards smaller and picture resolution more crisp.
 [2] Nav bar, start with one link
 [3] onClick on movie card take to a page with more info on the movie, (show page)
