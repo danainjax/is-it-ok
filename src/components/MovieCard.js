@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function MovieCard({
   id,
   image,
@@ -11,24 +13,24 @@ function MovieCard({
   year,
   director,
 }) {
+  console.log(id)
   return (
     <>
       <div className='card'>
-        <img src={image} alt={title} />
+        <Link to={`/movies/${id}`}>
+          <img src={image} alt={title} />
+        </Link>
         <div className='container'>
           <p>{releaseDate}</p>
           <h4>
-            <b>{title}</b>
+            <Link to={`/movies/${id}`}>
+              <b>{title}</b>
+            </Link>
+
             <p>{contentRating}</p>
             <p>{runtime}</p>
           </h4>
           <p>{plot}</p>
-          <ul>
-            <li>{year ? year : 'Hello'}</li>
-            <li>{director ? director : 'Director'}</li>
-            <li>{stars ? stars : 'Starring'}</li>
-            <li>{genres ? genres : 'genres'}</li>
-          </ul>
         </div>
       </div>
     </>

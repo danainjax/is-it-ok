@@ -1,7 +1,7 @@
 export const fetchInTheaters = () => {
   return (dispatch) =>
     fetch('http://localhost:3000/movies')
-      .then((resp) => resp.json())
+      .then((res) => res.json())
       .then((movies) =>
         dispatch({ type: 'FETCH_IN_THEATERS', payload: movies })
       )
@@ -9,9 +9,9 @@ export const fetchInTheaters = () => {
 
 export const movieShow = (id) => {
   return (dispatch) =>
-    fetch(`http://localhost:3000/movies/ + {id}`)
-      .then((resp) => resp.json())
-      .then((movies) => dispatch({ type: 'MOVIE_SHOW', payload: movies }))
+    fetch(`http://localhost:3000/movies/${id}`)
+      .then((res) => res.json())
+      .then((movie) => dispatch({ type: 'MOVIE_SHOW', payload: movie }))
 }
 
 // export const mostPopular = () => {
