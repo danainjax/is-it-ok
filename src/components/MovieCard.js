@@ -13,7 +13,6 @@ function MovieCard({
   year,
   director,
 }) {
-  console.log(id)
   return (
     <>
       <div className='card'>

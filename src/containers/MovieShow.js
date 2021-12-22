@@ -18,7 +18,6 @@ function MovieShow({
   genres,
 }) {
   const routeId = useParams().id
-  console.log(routeId)
   useEffect(() => {
     getMovie(routeId)
   }, [getMovie, routeId])
