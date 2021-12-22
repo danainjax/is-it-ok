@@ -17,18 +17,23 @@ const initialState = {
   movie: initialMovie,
 }
 
-export default function MovieReducer(state = initialState, action) {
+export function MovieReducer(state = initialState, action) {
   switch (action.type) {
     case 'FETCH_IN_THEATERS':
       return {
         ...state,
         movies: action.payload,
       }
+
     case 'GET_MOVIE':
       return {
         ...state,
         movie: action.payload,
       }
+    case 'CLEAR_MOVIE':
+      console.log('hello')
+      return { ...state, movie: initialMovie }
+
     default:
       return { ...state }
   }

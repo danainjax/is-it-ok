@@ -14,6 +14,8 @@ export const getMovie = (id) => {
       .then((movie) => dispatch({ type: 'GET_MOVIE', payload: movie }))
 }
 
+export const clearMovie = () => ({ type: 'CLEAR_MOVIE' })
+
 // export const mostPopular = () => {
 //   return (dispatch) =>
 //     fetch('https://localhost:3000/popular')
