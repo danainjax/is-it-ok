@@ -9,6 +9,11 @@ export default function MovieReducer(state = initialState, action) {
         ...state,
         movies: action.payload,
       }
+    case 'MOVIE_SHOW':
+      return {
+        ...state,
+        movies: action.payload,
+      }
     default:
       return { ...state }
   }

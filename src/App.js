@@ -20,7 +20,7 @@ class App extends Component {
             <MovieList />
             MovieList
           </Route>
-          <Route path='/users'>
+          <Route path='/users/:id'>
             <Users />
           </Route>
         </Switch>
