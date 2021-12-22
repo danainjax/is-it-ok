@@ -1,18 +1,20 @@
+const initialMovie = {
+  id: '',
+  title: '',
+  fullTitle: '',
+  image: '',
+  plot: '',
+  year: '',
+  stars: '',
+  runtime: '',
+  releaseDate: '',
+  director: '',
+  genres: '',
+}
+
 const initialState = {
   movies: [],
-  movieShow: {
-    id: '',
-    title: '',
-    fullTitle: '',
-    image: '',
-    plot: '',
-    year: '',
-    stars: '',
-    runtime: '',
-    releaseDate: '',
-    director: '',
-    genres: '',
-  },
+  movie: initialMovie,
 }
 
 export default function MovieReducer(state = initialState, action) {
@@ -22,11 +24,11 @@ export default function MovieReducer(state = initialState, action) {
         ...state,
         movies: action.payload,
       }
-    case 'MOVIE_SHOW':
+    case 'GET_MOVIE':
       console.log('Getting the movie show page', action.payload)
       return {
         ...state,
-        movieShow: action.payload,
+        movie: action.payload,
       }
     default:
       return { ...state }
