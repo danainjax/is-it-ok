@@ -25,7 +25,6 @@ export default function MovieReducer(state = initialState, action) {
         movies: action.payload,
       }
     case 'GET_MOVIE':
-      console.log('Getting the movie show page', action.payload)
       return {
         ...state,
         movie: action.payload,
