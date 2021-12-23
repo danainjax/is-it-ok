@@ -6,7 +6,6 @@ import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import Loader from 'react-loader-spinner'
 
 function MovieList({ fetchInTheaters, movielist }) {
-  console.log(movielist)
   useEffect(fetchInTheaters, [fetchInTheaters])
   //dependency, useEffect will run fetchInTheaters if fetchInTheaters changes
 
