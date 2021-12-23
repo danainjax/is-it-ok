@@ -6,7 +6,6 @@ import { Provider } from 'react-redux'
 import { MovieReducer } from './redux/reducers/MovieReducer'
 import AccountReducer from './redux/reducers/AccountReducer'
 import thunk from 'redux-thunk'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 const allReducers = combineReducers({

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Card } from '@mui/material'
 
 function MovieCard({
   id,
@@ -16,21 +17,23 @@ function MovieCard({
   return (
     <>
       <div className='card'>
-        <Link to={`/movies/${id}`}>
-          <img src={image} alt={title} />
-        </Link>
-        <div className='container'>
-          <p>{releaseDate}</p>
-          <h4>
-            <Link to={`/movies/${id}`}>
-              <b>{title}</b>
-            </Link>
+        <Card>
+          <Link to={`/movies/${id}`}>
+            <img src={image} alt={title} />
+          </Link>
+          <div className='container'>
+            <p>{releaseDate}</p>
+            <h4>
+              <Link to={`/movies/${id}`}>
+                <b>{title}</b>
+              </Link>
 
-            <p>{contentRating}</p>
-            <p>{runtime}</p>
-          </h4>
-          <p>{plot}</p>
-        </div>
+              <p>{contentRating}</p>
+              <p>{runtime}</p>
+            </h4>
+            <p>{plot}</p>
+          </div>
+        </Card>
       </div>
     </>
   )
