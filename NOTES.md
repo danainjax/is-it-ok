@@ -1,20 +1,14 @@
 Build notes:
-_- Build nav bar
-_- Build Movie Show page
-[a] Make cards smaller and picture resolution more crisp.
-[2] Nav bar, start with one link
-[3] onClick on movie card take to a page with more info on the movie, (show page)
-[4] Build a review model/form - remember key categories to include in the review: Violence, Sex, Language, etc.
-[5] Will need to build a login at this point
-[6] Associate the reviews to the movie through the user model
-[7] Create an icon for the browser for movie safe
-[8] Create a logo for movie safe on Canva
 
-\*Then, work more on api and what data we are pulling thru.
-1 - Need capability to search for a movie, Build search bar.
-Movies in the last three months are priority/current movies or movies in the last year.
+[1] Build a review model/form - remember key categories to include in the review: Violence, Sex, Language, etc.
+[2] Make searchbar work
+[2] Will need to build a login at this point
+[3] Associate the reviews to the movie through the user model
+[4] Make cards smaller and picture resolution more crisp.
+[5] Create an icon for the browser for movie safe
+[6] Create a logo for movie safe on Canva
 
-# Requirements [ 8/12 ]
+# Requirements [ 11/12 ]
 
 [X] The code should be written in ES6 as much as possible
 
@@ -33,16 +27,18 @@ Movies in the last three months are priority/current movies or movies in the las
 
 [X] There should be 2 container components
 [X] 1-MovieList connected to Redux store
+[X] 2-MovieShow connected to Redux store
 2-ReviewList
-3-Account
+[X] 3-Users connected to the Redux store
 
-[X] There should be 5 stateless components- the idea here is to use redux for your state, 5 components connected to your redux store for your state
-1-User
+[ ] There should be 5 stateless components- the idea here is to use redux for your state, 5 components connected to your redux store for your state
+[X] 1-User
 2-Review
 3-ReviewForm
 [X] 4-MovieCard - connected to MovieList
 5-UserForm
 [X] 6-SearchBar
+[X] 7-Navbar
 
 [X] There should be 3 routes, good rule for back end and your front end
 /movies
