@@ -1,5 +1,5 @@
 const initialMovie = {
-  id: '',
+  id: null,
   title: '',
   fullTitle: '',
   image: '',
@@ -31,7 +31,6 @@ export function MovieReducer(state = initialState, action) {
         movie: action.payload,
       }
     case 'CLEAR_MOVIE':
-      console.log('hello')
       return { ...state, movie: initialMovie }
 
     default:
