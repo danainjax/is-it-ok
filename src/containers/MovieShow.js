@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 
 function MovieShow({
   getMovie,
+  clearMovie,
   movie,
   fullTitle,
   id,
@@ -24,7 +25,7 @@ function MovieShow({
   useEffect(() => {
     getMovie(routeId)
     return clearMovie
-  }, [getMovie, routeId])
+  }, [getMovie, routeId, clearMovie])
 
   return (
     <div className='card'>
