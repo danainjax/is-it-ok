@@ -1,5 +1,7 @@
 const initialState = {
   users: [],
+  user: '',
+  id: '',
 }
 
 export default function AccountReducer(state = initialState, action) {
@@ -8,6 +10,12 @@ export default function AccountReducer(state = initialState, action) {
       return {
         ...state,
         users: action.payload,
+      }
+    case 'GET_USER':
+      console.log('get user')
+      return {
+        ...state,
+        user: action.payload,
       }
     default:
       return { ...state }
