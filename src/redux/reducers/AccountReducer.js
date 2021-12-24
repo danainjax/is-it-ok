@@ -1,6 +1,6 @@
 const initialState = {
   users: [],
-  user: 'Mommy',
+  user: '',
   id: '',
 }
 
@@ -13,6 +13,11 @@ export default function AccountReducer(state = initialState, action) {
       }
     case 'GET_USER':
       console.log('get user')
+      return {
+        ...state,
+        user: action.payload,
+      }
+    case 'SUBMIT_SIGNUP':
       return {
         ...state,
         user: action.payload,

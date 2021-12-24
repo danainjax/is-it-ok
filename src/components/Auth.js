@@ -1,26 +1,45 @@
 import * as React from 'react'
 import Button from '@mui/material/Button'
 import { connect } from 'react-redux'
-import { getUser } from '../redux/actions/AccountActions'
+import { getUser, submitSignup } from '../redux/actions/AccountActions'
 import { useState } from 'react'
-import { useForm } from 'react-hook-form'
 
 const Auth = (props) => {
+  //local state to send to sign up or log in
   const [signup, setSignup] = useState(false)
-  const { register, handleSubmit } = useForm()
-  const onSubmit = (data) => console.log(data)
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
 
   const toggleSignup = () => setSignup(!signup)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    props.submitSignup({ name: username, password })
+  }
+
   return (
     <>
       {signup ? <h1>sign up!</h1> : <h1> log in!</h1>}
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...register('username')} />
-        <input type='submit' />
+      <form onSubmit={handleSubmit}>
+        <input
+          type='text'
+          name='username'
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          placeholder='username'
+        />
+        <input
+          type='password'
+          name='password'
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
+          placeholder='password'
+        />
+
+        <Button variant='contained' input type='submit' onClick={toggleSignup}>
+          {signup ? 'log in' : 'sign up'}
+        </Button>
       </form>
-      <Button variant='contained' onClick={toggleSignup}>
-        {signup ? 'log in' : 'sign up'}
-      </Button>
     </>
   )
 }
@@ -29,4 +48,4 @@ const mapStateToProps = (state) => {
   return { user: state.users.user }
 }
 
-export default connect(mapStateToProps, { getUser })(Auth)
+export default connect(mapStateToProps, { getUser, submitSignup })(Auth)
