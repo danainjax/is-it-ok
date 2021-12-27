@@ -5,12 +5,12 @@ export const getUsers = () => {
       .then((users) => dispatch({ type: 'GET_USERS', payload: users }))
 }
 
-export const setUser = (id) => {
-  return (dispatch) =>
-    fetch(`http://localhost:3000/users/${id}`)
-      .then((res) => res.json())
-      .then((user) => dispatch({ type: 'SET_USER', payload: user }))
-}
+// export const setUser = (id) => {
+//   return (dispatch) =>
+//     fetch(`http://localhost:3000/users/${id}`)
+//       .then((res) => res.json())
+//       .then((user) => dispatch({ type: 'SET_USER', payload: user }))
+// }
 
 export const submitSignup = (user) => {
   console.log(user)
@@ -21,16 +21,17 @@ export const submitSignup = (user) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(user),
-    }).then((res) => console.log(res))
+    }).then((res) => handleUserResponse(res, dispatch))
 }
 
 function handleUserResponse(res, dispatch) {
+  debugger
   console.log(res)
   if (res.ok) {
     res.json().then((response) => {
+      console.log(response)
       localStorage.token = response.token
-      console.log(localStorage.token)
-      dispatch({ type: 'SET_USER', payload: response.user })
+      dispatch({ type: 'SET_USER', payload: response.name })
     })
   } else {
     res.json().then((res) => alert(res.errors))

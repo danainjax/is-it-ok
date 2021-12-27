@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Button from '@mui/material/Button'
 import { connect } from 'react-redux'
-import { setUser, submitSignup } from '../redux/actions/AccountActions'
+import { submitSignup } from '../redux/actions/AccountActions'
 import { useState } from 'react'
 
 const Auth = (props) => {
@@ -58,4 +58,4 @@ const mapStateToProps = (state) => {
   return { user: state.users.user }
 }
 
-export default connect(mapStateToProps, { setUser, submitSignup })(Auth)
+export default connect(mapStateToProps, { submitSignup })(Auth)
