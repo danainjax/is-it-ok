@@ -11,8 +11,8 @@ export default function AccountReducer(state = initialState, action) {
         ...state,
         users: action.payload,
       }
-    case 'GET_USER':
-      console.log('get user')
+    case 'SET_USER':
+      console.log('set user')
       return {
         ...state,
         user: action.payload,
