@@ -21,17 +21,27 @@ export const submitSignup = (user) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(user),
+    }).then((res) => {
+      console.log(res)
+      handleUserResponse(res, dispatch)
+    })
+}
+export const autoLogin = () => {
+  return (dispatch) =>
+    fetch('http://localhost:3000/users', {
+      headers: {
+        'Authorization': localStorage.token,
+      },
     }).then((res) => handleUserResponse(res, dispatch))
 }
 
 function handleUserResponse(res, dispatch) {
-  debugger
   console.log(res)
   if (res.ok) {
     res.json().then((response) => {
       console.log(response)
       localStorage.token = response.token
-      dispatch({ type: 'SET_USER', payload: response.name })
+      dispatch({ type: 'SET_USER', payload: response.user })
     })
   } else {
     res.json().then((res) => alert(res.errors))

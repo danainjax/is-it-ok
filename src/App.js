@@ -7,9 +7,12 @@ import Users from './containers/Users'
 import { Navbar } from './components/Navbar'
 import Auth from './components/Auth'
 import { connect } from 'react-redux'
+import { useEffect } from 'react'
+import { autoLogin } from './redux/actions/AccountActions'
 
-function App({ user }) {
+function App({ user, autoLogin }) {
   console.log(user)
+  useEffect(() => localStorage.token && autoLogin(), [autoLogin])
   return (
     <div>
       <h1>movie safe</h1>
@@ -41,4 +44,4 @@ function App({ user }) {
 
 const mapStateToProps = (state) => ({ user: state.users.user })
 
-export default connect(mapStateToProps)(App)
+export default connect(mapStateToProps, { autoLogin })(App)
