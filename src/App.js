@@ -11,8 +11,8 @@ import { useEffect } from 'react'
 import { autoLogin } from './redux/actions/AccountActions'
 
 function App({ user, autoLogin }) {
-  console.log(user)
-  useEffect(() => localStorage.token && autoLogin(), [autoLogin])
+  console.log(localStorage.token)
+  // useEffect(() => localStorage.token && autoLogin(), [autoLogin])
   return (
     <div>
       <h1>movie safe</h1>
@@ -30,7 +30,7 @@ function App({ user, autoLogin }) {
             <Route path='/movies'>
               <MovieList />
             </Route>
-            <Route path='/users/:id'>
+            <Route path='/user'>
               <Users />
             </Route>
           </Switch>

@@ -5,13 +5,6 @@ export const getUsers = () => {
       .then((users) => dispatch({ type: 'GET_USERS', payload: users }))
 }
 
-// export const setUser = (id) => {
-//   return (dispatch) =>
-//     fetch(`http://localhost:3000/users/${id}`)
-//       .then((res) => res.json())
-//       .then((user) => dispatch({ type: 'SET_USER', payload: user }))
-// }
-
 export const submitSignup = (user) => {
   console.log(user)
   return (dispatch) =>
@@ -28,11 +21,27 @@ export const submitSignup = (user) => {
 }
 export const autoLogin = () => {
   return (dispatch) =>
-    fetch('http://localhost:3000/users', {
+    fetch('http://localhost:3000/me', {
       headers: {
         'Authorization': localStorage.token,
       },
     }).then((res) => handleUserResponse(res, dispatch))
+}
+
+export const submitLogin = (user) => {
+  return (dispatch) =>
+    fetch('https://localhost3000/sessions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    })
+      .then((res) => res.json())
+      .then((resp) => {
+        localStorage.token = resp.token
+        dispatch({ type: 'SET_USER', payload: resp.user })
+      })
 }
 
 function handleUserResponse(res, dispatch) {

@@ -1,8 +1,9 @@
 import * as React from 'react'
 import Button from '@mui/material/Button'
 import { connect } from 'react-redux'
-import { submitSignup } from '../redux/actions/AccountActions'
+import { submitSignup, submitLogin } from '../redux/actions/AccountActions'
 import { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
 const Auth = (props) => {
   //local state to send to sign up or log in
@@ -11,12 +12,18 @@ const Auth = (props) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
+  const history = useHistory()
+
   const toggleSignup = () => setSignup(!signup)
 
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(username, email, password)
-    props.submitSignup({ name: username, password, email })
+    history.push('/movies')
+
+    signup
+      ? props.submitSignup({ name: username, password, email })
+      : props.submitLogin({ name: username, password })
   }
 
   return (
@@ -31,13 +38,16 @@ const Auth = (props) => {
           placeholder='username'
         />
 
-        <input
-          type='text'
-          name='email'
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-          placeholder='email'
-        />
+        {signup && (
+          <input
+            type='text'
+            name='email'
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+            placeholder='email'
+          />
+        )}
+
         <input
           type='password'
           name='password'
@@ -47,7 +57,7 @@ const Auth = (props) => {
         />
 
         <Button variant='contained' input type='submit' onClick={toggleSignup}>
-          {signup ? 'log in' : 'sign up'}
+          {signup ? 'sign up' : 'log in'}
         </Button>
       </form>
     </>
@@ -58,4 +68,4 @@ const mapStateToProps = (state) => {
   return { user: state.users.user }
 }
 
-export default connect(mapStateToProps, { submitSignup })(Auth)
+export default connect(mapStateToProps, { submitSignup, submitLogin })(Auth)

@@ -21,6 +21,11 @@ export default function AccountReducer(state = initialState, action) {
         ...state,
         user: action.payload,
       }
+    case 'SUBMIT_LOGIN':
+      return {
+        ...state,
+        user: action.payload,
+      }
     default:
       return { ...state }
   }
