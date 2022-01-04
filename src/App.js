@@ -9,6 +9,7 @@ import Auth from './components/Auth'
 import { connect } from 'react-redux'
 import { useEffect } from 'react'
 import { autoLogin } from './redux/actions/AccountActions'
+import ReviewForm from './components/ReviewForm'
 
 function App({ user, autoLogin }) {
   console.log(localStorage.token)
@@ -22,6 +23,7 @@ function App({ user, autoLogin }) {
         <div>
           <SearchBar />
           <p></p>
+          <ReviewForm />
           <Switch>
             {/* go from most specific to least specific for routes */}
             <Route path='/movies/:id'>
