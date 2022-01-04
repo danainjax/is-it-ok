@@ -19,7 +19,7 @@ function MovieCard({
       <div className='card'>
         <Card>
           <Link to={`/movies/${id}`}>
-            <img src={image} alt={title} />
+            <img className='movie-index' src={image} alt={title} />
           </Link>
           <div className='container'>
             <p>{releaseDate}</p>

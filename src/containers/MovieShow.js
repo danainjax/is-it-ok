@@ -33,7 +33,7 @@ function MovieShow({
     <div className='card'>
       <div className='container'>
         <h1>{fullTitle}</h1>
-        <img src={image} alt={title} />
+        <img className='movie-show' src={image} alt={title} />
         <p>{plot}</p>
       </div>
     </div>

@@ -18,7 +18,7 @@ div {
 }
 
 /* Add rounded corners to the top left and the top right corner of the image */
-img {
+.movie-index {
   /* border-radius: 10px 10px 0 0; */
   display: block;
   border: 0;
