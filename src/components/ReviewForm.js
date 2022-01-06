@@ -1,4 +1,6 @@
-const ReviewForm = () => {
+import { useState } from 'react'
+
+function ReviewForm() {
   return (
     <>
       <form>
