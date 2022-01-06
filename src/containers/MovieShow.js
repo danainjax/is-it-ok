@@ -21,6 +21,7 @@ function MovieShow({
   releaseDate,
   director,
   genres,
+  reviews,
 }) {
   const routeId = useParams().id
 
@@ -34,7 +35,7 @@ function MovieShow({
       <div className='container'>
         <h1>{fullTitle}</h1>
         <img className='movie-show' src={image} alt={title} />
-        <p>{plot}</p>
+        <p>{reviews.comment}</p>
       </div>
     </div>
   )

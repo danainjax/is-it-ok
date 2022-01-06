@@ -1,6 +1,9 @@
 import { NavLink } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { logout } from '../redux/actions/AccountActions'
 
-export const Navbar = () => {
+export const Navbar = (props) => {
+  console.log(props.logout)
   return (
     <div className='navbar'>
       <ul className='navbar'>
@@ -19,7 +22,12 @@ export const Navbar = () => {
         <li>
           <NavLink to='/search'>search</NavLink>
         </li>
+        <li>
+          <button onClick={logout}>logout</button>
+        </li>
       </ul>
     </div>
   )
 }
+
+export default connect(null, { logout })(Navbar)

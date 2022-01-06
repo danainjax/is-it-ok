@@ -1,7 +1,11 @@
+// const initialUser = {
+//   user: '',
+// }
+
 const initialState = {
   users: [],
   user: '',
-  id: '',
+  // id: '',
 }
 
 export default function AccountReducer(state = initialState, action) {
@@ -26,6 +30,9 @@ export default function AccountReducer(state = initialState, action) {
         ...state,
         user: action.payload,
       }
+    case 'LOGOUT':
+      return { ...state, user: '' }
+
     default:
       return { ...state }
   }

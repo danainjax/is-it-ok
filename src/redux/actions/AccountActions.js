@@ -56,3 +56,11 @@ function handleUserResponse(res, dispatch) {
     res.json().then((res) => alert(res.errors))
   }
 }
+
+export const logout = () => {
+  console.log(logout)
+  return (dispatch) => {
+    localStorage.clear()
+    dispatch({ type: 'LOGOUT' })
+  }
+}

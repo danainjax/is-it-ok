@@ -10,6 +10,7 @@ const initialMovie = {
   releaseDate: '',
   director: '',
   genres: '',
+  reviews: [],
 }
 
 const initialState = {

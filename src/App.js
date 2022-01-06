@@ -32,7 +32,7 @@ function App({ user, autoLogin }) {
             <Route path='/movies'>
               <MovieList />
             </Route>
-            <Route path='/user'>
+            <Route path='/users/:id'>
               <Users />
             </Route>
           </Switch>
