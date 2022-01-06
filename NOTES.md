@@ -27,18 +27,17 @@ Build notes:
 
 [X] There should be 2 container components
 [X] 1-MovieList connected to Redux store
-[X] 2-MovieShow connected to Redux store
-2-ReviewList
-[X] 3-Users connected to the Redux store
+[X]-2-ReviewList connected to Redux store
 
-[ ] There should be 5 stateless components- the idea here is to use redux for your state, 5 components connected to your redux store for your state
-[X] 1-User
-2-Review
-3-ReviewForm
-[X] 4-MovieCard - connected to MovieList
-5-UserForm
-[X] 6-SearchBar
-[X] 7-Navbar
+[X] There should be 5 stateless components- the idea here is to use redux for your state, 5 components connected to your redux store for your state
+[X] 1-MovieCard - connected to MovieList
+[X] 2-ReviewCard - connected to ReviewList
+[X] 3-MovieShow
+[ ] 4-ReviewForm
+[ ] 5-SearchBar
+[X] 6-Navbar
+[X] 7-Auth
+[X] 8-Navbar
 
 [X] There should be 3 routes, good rule for back end and your front end
 /movies
