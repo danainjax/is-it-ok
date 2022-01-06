@@ -4,6 +4,7 @@ import { getMovie, clearMovie } from '../redux/actions/MovieActions'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import Loader from 'react-loader-spinner'
 import ReviewList from '../containers/ReviewList'
+import ReviewForm from './ReviewForm'
 
 import { useEffect } from 'react'
 
@@ -35,6 +36,7 @@ function MovieShow({
       <div className='container'>
         <h1>{fullTitle}</h1>
         <img className='movie-show' src={image} alt={title} />
+        <ReviewForm />
         <ReviewList />
       </div>
     </div>
