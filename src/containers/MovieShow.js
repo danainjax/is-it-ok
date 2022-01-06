@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { getMovie, clearMovie } from '../redux/actions/MovieActions'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import Loader from 'react-loader-spinner'
+import ReviewList from './ReviewList'
 
 import { useEffect } from 'react'
 
@@ -21,7 +22,6 @@ function MovieShow({
   releaseDate,
   director,
   genres,
-  reviews,
 }) {
   const routeId = useParams().id
 
@@ -35,7 +35,8 @@ function MovieShow({
       <div className='container'>
         <h1>{fullTitle}</h1>
         <img className='movie-show' src={image} alt={title} />
-        <p>{reviews.comment}</p>
+        <p>HELLO REVIEWS</p>
+        <ReviewList />
       </div>
     </div>
   )

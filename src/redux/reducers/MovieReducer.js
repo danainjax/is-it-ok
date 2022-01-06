@@ -1,5 +1,6 @@
 const initialMovie = {
   id: null,
+  reviews: [],
   title: '',
   fullTitle: '',
   image: '',
@@ -10,7 +11,6 @@ const initialMovie = {
   releaseDate: '',
   director: '',
   genres: '',
-  reviews: [],
 }
 
 const initialState = {
