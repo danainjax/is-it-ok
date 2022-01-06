@@ -35,7 +35,6 @@ function MovieShow({
       <div className='container'>
         <h1>{fullTitle}</h1>
         <img className='movie-show' src={image} alt={title} />
-        <p>HELLO REVIEWS</p>
         <ReviewList />
       </div>
     </div>
