@@ -16,6 +16,21 @@ export const getMovie = (id) => {
 
 export const clearMovie = () => ({ type: 'CLEAR_MOVIE' })
 
+export const submitReview = (review, movieId) => {
+  console.log('submit review action')
+  return (dispatch) =>
+    fetch(`http://localhost:3000/movies/${movieId}/reviews`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': localStorage.token,
+      },
+      body: JSON.stringify(review),
+    })
+      .then((res) => res.json())
+      .then(console.log)
+}
+
 // export const mostPopular = () => {
 //   return (dispatch) =>
 //     fetch('https://localhost:3000/popular')

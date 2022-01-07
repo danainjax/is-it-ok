@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { connect } from 'react-redux'
+import { submitReview } from '../redux/actions/MovieActions'
 
-function ReviewForm({ movieId }) {
+function ReviewForm({ movieId, submitReview }) {
   const [rating, setRating] = useState(5)
   const [sex, setSex] = useState('')
   const [language, setLanguage] = useState('')
@@ -19,6 +20,7 @@ function ReviewForm({ movieId }) {
       movieId,
     }
     console.log(newReview)
+    submitReview(newReview, movieId)
   }
 
   return (
@@ -80,4 +82,4 @@ function ReviewForm({ movieId }) {
 
 const mapStateToProps = (state) => ({ movieId: state.movieStore.movie.id })
 
-export default connect(mapStateToProps)(ReviewForm)
+export default connect(mapStateToProps, { submitReview })(ReviewForm)
