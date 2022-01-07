@@ -1,10 +1,8 @@
 Build notes:
-
-[1] Build a review model/form - remember key categories to include in the review: Violence, Sex, Language, etc.
-[2] Make searchbar work
-[2] Will need to build a login at this point
-[3] Associate the reviews to the movie through the user model
-[4] Make cards smaller and picture resolution more crisp.
+[1] Rewrite CSS to ensure the movie image fills the cards on the movies index page, but the card is smaller on the show page.
+[2] Pull through more movie data on the show page. (Plot, actors, reviews, etc)
+[3] Fix account creation/submit feature
+[4] Implement a search bar feature
 [5] Create an icon for the browser for movie safe
 [6] Create a logo for movie safe on Canva
 
@@ -33,16 +31,16 @@ Build notes:
 [X] 1-MovieCard - connected to MovieList
 [X] 2-ReviewCard - connected to ReviewList
 [X] 3-MovieShow
-[ ] 4-ReviewForm
+[X] 4-ReviewForm
 [ ] 5-SearchBar
 [X] 6-Navbar
 [X] 7-Auth
 [X] 8-Navbar
 
-[X] There should be 3 routes, good rule for back end and your front end
-/movies
-/movies/:id
-/users => need to configure this to be an account route like /login or /account or /user (with slug)
+[ ] There should be 3 routes, good rule for back end and your front end
+[X] /movies
+[X] /movies/:id
+[ ] /me set up this account route
 
 [X] The Application must make use of react-router and proper RESTful routing (should you choose to use react-router v3 please refer to the appropriate docs (Links to an external site.); docs for v4 can be found here (Links to an external site.)) \*see restular.com
 
