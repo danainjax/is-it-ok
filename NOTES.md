@@ -1,10 +1,11 @@
 Build notes:
 [1] Rewrite CSS to ensure the movie image fills the cards on the movies index page, but the card is smaller on the show page.
-[2] Pull through more movie data on the show page. (Plot, actors, reviews, etc)
-[3] Fix account creation/submit feature
-[4] Implement a search bar feature
-[5] Create an icon for the browser for movie safe
-[6] Create a logo for movie safe on Canva
+[2] Write HTML/CSS for the review cards.
+[3] Pull through more movie data on the show page. (Plot, actors, reviews, etc)
+[4] Fix account creation/submit feature
+[5] Implement a search bar feature
+[6] Create an icon for the browser for movie safe
+[7] Create a logo for movie safe on Canva
 
 # Requirements [ 11/12 ]
 
