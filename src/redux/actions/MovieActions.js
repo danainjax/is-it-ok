@@ -28,7 +28,7 @@ export const submitReview = (review, movieId) => {
       body: JSON.stringify(review),
     })
       .then((res) => res.json())
-      .then(console.log)
+      .then((review) => dispatch({ type: 'ADD_REVIEW', payload: review }))
 }
 
 // export const mostPopular = () => {

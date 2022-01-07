@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import Button from '@mui/material/Button'
 import { connect } from 'react-redux'
 import { submitSignup, submitLogin } from '../redux/actions/AccountActions'
@@ -56,7 +56,7 @@ const Auth = (props) => {
           placeholder='password'
         />
 
-        <Button variant='contained' input type='submit' onClick={toggleSignup}>
+        <Button variant='contained' type='submit' onClick={toggleSignup}>
           {signup ? 'sign up' : 'log in'}
         </Button>
       </form>

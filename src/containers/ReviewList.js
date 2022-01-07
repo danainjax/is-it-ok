@@ -2,7 +2,6 @@ import { connect } from 'react-redux'
 import ReviewCard from '../components/Review.Card.js'
 
 function ReviewList({ reviews }) {
-  console.log({ reviews })
   return (
     <div>
       {reviews.map((review) => (

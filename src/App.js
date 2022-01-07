@@ -11,8 +11,7 @@ import { useEffect } from 'react'
 import { autoLogin } from './redux/actions/AccountActions'
 
 function App({ user, autoLogin }) {
-  console.log(localStorage.token)
-  // useEffect(() => localStorage.token && autoLogin(), [autoLogin])
+  useEffect(() => localStorage.token && autoLogin(), [autoLogin])
   return (
     <div>
       <h1>movie safe</h1>

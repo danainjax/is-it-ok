@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { logout } from '../redux/actions/AccountActions'
 
 export const Navbar = (props) => {
-  console.log(props.logout)
   return (
     <div className='navbar'>
       <ul className='navbar'>

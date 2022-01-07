@@ -34,6 +34,15 @@ export function MovieReducer(state = initialState, action) {
     case 'CLEAR_MOVIE':
       return { ...state, movie: initialMovie }
 
+    case 'ADD_REVIEW':
+      return {
+        ...state,
+        movie: {
+          ...state.movie,
+          reviews: [action.payload, ...state.movie.reviews],
+        },
+      }
+
     default:
       return { ...state }
   }

@@ -45,10 +45,8 @@ export const submitLogin = (user) => {
 }
 
 function handleUserResponse(res, dispatch) {
-  console.log(res)
   if (res.ok) {
     res.json().then((response) => {
-      console.log(response)
       localStorage.token = response.token
       dispatch({ type: 'SET_USER', payload: response.user })
     })
