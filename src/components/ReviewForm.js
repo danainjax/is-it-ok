@@ -1,14 +1,29 @@
 import { useState } from 'react'
+import { connect } from 'react-redux'
 
-function ReviewForm() {
+function ReviewForm({ movieId }) {
   const [rating, setRating] = useState(5)
   const [sex, setSex] = useState('')
   const [language, setLanguage] = useState('')
   const [violence, setViolence] = useState('')
   const [comment, setComment] = useState('')
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+    const newReview = {
+      rating,
+      sex,
+      language,
+      violence,
+      comment,
+      movieId,
+    }
+    console.log(newReview)
+  }
+
   return (
     <>
-      <form>
+      <form onSubmit={onSubmit}>
         <h1>Review form</h1>
         <label>
           Rating:
@@ -63,4 +78,6 @@ function ReviewForm() {
   )
 }
 
-export default ReviewForm
+const mapStateToProps = (state) => ({ movieId: state.movieStore.movie.id })
+
+export default connect(mapStateToProps)(ReviewForm)
