@@ -4,20 +4,21 @@ import { SearchBar } from './components/SearchBar'
 import { Switch, Route } from 'react-router-dom'
 import MovieShow from './components/MovieShow'
 import Users from './containers/Users'
-import { Navbar } from './components/Navbar'
+import Navbar from './components/Navbar'
 import Auth from './components/Auth'
 import { connect } from 'react-redux'
 import { useEffect } from 'react'
 import { autoLogin } from './redux/actions/AccountActions'
 
 function App({ user, autoLogin }) {
+  console.log({ user })
   useEffect(() => localStorage.token && autoLogin(), [autoLogin])
   return (
     <div>
       <h1>movie safe</h1>
 
       <Navbar />
-      {user ? (
+      {user.name ? (
         <div>
           <SearchBar />
           <Switch>

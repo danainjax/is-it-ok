@@ -59,6 +59,7 @@ export const logout = () => {
   console.log(logout)
   return (dispatch) => {
     localStorage.clear()
+    console.log('logging out action')
     dispatch({ type: 'LOGOUT' })
   }
 }
