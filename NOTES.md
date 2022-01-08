@@ -1,11 +1,10 @@
 Build notes:
-[1] Rewrite CSS to ensure the movie image fills the cards on the movies index page, but the card is smaller on the show page.
-[2] Write HTML/CSS for the review cards.
-[3] Pull through more movie data on the show page. (Plot, actors, reviews, etc)
-[4] Fix account creation/submit feature
-[5] Implement a search bar feature
-[6] Create an icon for the browser for movie safe
-[7] Create a logo for movie safe on Canva
+[1] Write HTML/CSS for the review cards review form
+[2] Pull through more movie data on the show page. (addtl fetch with ttId)
+[3] Fix account creation/submit feature
+[4] Implement a search bar feature
+[5] Create an icon for the browser for movie safe
+[6] Create a logo for movie safe on Canva
 
 # Requirements [ 11/12 ]
 
@@ -37,11 +36,13 @@ Build notes:
 [X] 6-Navbar
 [X] 7-Auth
 [X] 8-Navbar
+[X] 9-User
 
 [ ] There should be 3 routes, good rule for back end and your front end
 [X] /movies
 [X] /movies/:id
 [ ] /me set up this account route
+[X] /users/:id
 
 [X] The Application must make use of react-router and proper RESTful routing (should you choose to use react-router v3 please refer to the appropriate docs (Links to an external site.); docs for v4 can be found here (Links to an external site.)) \*see restular.com
 
