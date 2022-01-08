@@ -1,3 +1,4 @@
+import { stepContentClasses } from '@mui/material'
 import { useState } from 'react'
 import { connect } from 'react-redux'
 import { submitReview } from '../redux/actions/MovieActions'
@@ -21,6 +22,11 @@ function ReviewForm({ movieId, submitReview }) {
     }
     console.log(newReview)
     submitReview(newReview, movieId)
+    setRating(5)
+    setSex('')
+    setViolence('')
+    setLanguage('')
+    setComment('')
   }
 
   return (
