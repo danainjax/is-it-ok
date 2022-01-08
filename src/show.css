@@ -1,17 +1,24 @@
 .movie-show {
   /* border-radius: 10px 10px 0 0; */
   display: block;
-  border: 0;
-  width: 25%;
-  height: 25%;
+  border: 10px;
+  width: 50%;
+  height: auto;
   border-radius: 5%;
 }
 
-.movie-show:hover {
+.movie-show:hover,
+.review-card:hover,
+.movie-details:hover,
+.review-form:hover {
   box-shadow: 0 20px 16px 0 rgb(245, 241, 241);
 }
 
-.review-card {
-  border: 20px;
+.review-card,
+.review-form,
+.movie-details {
+  border: 2px solid;
   border-radius: 5px;
+  margin: 10px;
+  font-size: larger;
 }

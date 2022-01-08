@@ -31,19 +31,23 @@ function MovieShow({
   }, [getMovie, routeId, clearMovie])
 
   const loadedMovie = () => (
-    <div className='card'>
-      <div className='container'>
+    <>
+      <div className='movie-show'>
         <h1>{title}</h1>
         <img className='movie-show' src={image} alt={title} />
-        <div>
-          <p>imdb rating: {imdbRating}</p>
-          <p>rank: {rank}</p>
-          <p> crew: {crew}</p>
-        </div>
+      </div>
+      <div className='movie-details'>
+        <p>imdb rating: {imdbRating}</p>
+        <p>rank: {rank}</p>
+        <p> crew: {crew}</p>
+      </div>
+      <div className='review-form'>
         <ReviewForm />
+      </div>
+      <div className='review-card'>
         <ReviewList />
       </div>
-    </div>
+    </>
   )
 
   const loader = () => (
