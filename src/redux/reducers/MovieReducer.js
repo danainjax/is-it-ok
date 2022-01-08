@@ -2,15 +2,13 @@ const initialMovie = {
   id: null,
   reviews: [],
   title: '',
-  fullTitle: '',
   image: '',
-  plot: '',
   year: '',
   stars: '',
-  runtime: '',
-  releaseDate: '',
-  director: '',
-  genres: '',
+  crew: '',
+  imdbRating: '',
+  ttID: '',
+  rank: '',
 }
 
 const initialState = {

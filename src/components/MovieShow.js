@@ -13,17 +13,15 @@ function MovieShow({
   getMovie,
   clearMovie,
   movie,
-  fullTitle,
-  id,
+  rank,
   title,
+  crew,
+  imdbRating,
+  ttId,
+  id,
   image,
-  plot,
   year,
   stars,
-  runtime,
-  releaseDate,
-  director,
-  genres,
 }) {
   const routeId = useParams().id
 
@@ -35,8 +33,13 @@ function MovieShow({
   const loadedMovie = () => (
     <div className='card'>
       <div className='container'>
-        <h1>{fullTitle}</h1>
+        <h1>{title}</h1>
         <img className='movie-show' src={image} alt={title} />
+        <div>
+          <p>imdb rating: {imdbRating}</p>
+          <p>rank: {rank}</p>
+          <p> crew: {crew}</p>
+        </div>
         <ReviewForm />
         <ReviewList />
       </div>
