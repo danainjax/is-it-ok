@@ -25,7 +25,7 @@ function ReviewForm({ movieId, submitReview }) {
 
   return (
     <>
-      <form onSubmit={onSubmit}>
+      <form className='form' onSubmit={onSubmit}>
         <h1>Review form</h1>
         <label>
           Rating:
@@ -38,6 +38,7 @@ function ReviewForm({ movieId, submitReview }) {
             value={rating}
           />
         </label>
+        <br />
         <label>
           Sex:
           <input
@@ -47,6 +48,7 @@ function ReviewForm({ movieId, submitReview }) {
             value={sex}
           />
         </label>
+        <br />
         <label>
           Language:
           <input
@@ -56,6 +58,7 @@ function ReviewForm({ movieId, submitReview }) {
             value={language}
           />
         </label>
+        <br />
         <label>
           Violence:
           <input
@@ -65,6 +68,7 @@ function ReviewForm({ movieId, submitReview }) {
             value={violence}
           />
         </label>
+        <br />
         <label>
           Comment:
           <input
@@ -74,6 +78,7 @@ function ReviewForm({ movieId, submitReview }) {
             value={comment}
           />
         </label>
+        <br />
         <input type='submit' value='Submit' />
       </form>
     </>

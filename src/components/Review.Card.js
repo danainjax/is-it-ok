@@ -1,6 +1,6 @@
 function Review({ name, rating, sex, violence, language, comment }) {
   return (
-    <div>
+    <div className='review-card'>
       <p>
         {name}rates it: {rating} ⭐stars
       </p>
@@ -8,7 +8,6 @@ function Review({ name, rating, sex, violence, language, comment }) {
       LANGUAGE:<p>{language}</p>
       VIOLENCE:<p>{violence}</p>
       COMMENT:<p>{comment}</p>
-      <p>_________________________</p>
     </div>
   )
 }

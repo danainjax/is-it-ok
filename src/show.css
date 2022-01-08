@@ -2,6 +2,16 @@
   /* border-radius: 10px 10px 0 0; */
   display: block;
   border: 0;
-  width: 50px;
-  height: 100px;
+  width: 25%;
+  height: 25%;
+  border-radius: 5%;
+}
+
+.movie-show:hover {
+  box-shadow: 0 20px 16px 0 rgb(245, 241, 241);
+}
+
+.review-card {
+  border: 20px;
+  border-radius: 5px;
 }
