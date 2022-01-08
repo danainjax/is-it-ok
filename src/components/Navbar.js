@@ -13,7 +13,7 @@ function Navbar({ logout, user }) {
           <NavLink to='/movies'>now playing</NavLink>
         </li>
         <li>
-          <NavLink to='/user/:id'>my account</NavLink>
+          <NavLink to={`/users/${user.name}`}>my account</NavLink>
         </li>
         <li>
           <NavLink to='/reviews'>reviews</NavLink>

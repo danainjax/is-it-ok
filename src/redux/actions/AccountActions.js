@@ -1,8 +1,8 @@
-export const getUsers = () => {
+export const getUser = (id) => {
   return (dispatch) =>
-    fetch('http://localhost:3000/users')
+    fetch(`http://localhost:3000/users/${id}`)
       .then((resp) => resp.json())
-      .then((users) => dispatch({ type: 'GET_USERS', payload: users }))
+      .then((user) => dispatch({ type: 'GET_USER', payload: user }))
 }
 
 export const submitSignup = (user) => {

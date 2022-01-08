@@ -1,11 +1,20 @@
-function User({ id, name, email, city, state }) {
+import { connect } from 'react-redux'
+import { getUser } from '../redux/actions/AccountActions'
+
+function User({ getUser, user }) {
+  console.log(user)
   return (
     <>
-      <h3>{name}</h3>
-      <p>{email}</p>
-      <h5>{city}</h5>
+      <div className='cards'>
+        <h3>{user.name}</h3>
+        <p>{user.email}</p>
+      </div>
     </>
   )
 }
 
-export default User
+const mapStateToProps = (state) => {
+  console.log(state)
+  return { user: state.users.user }
+}
+export default connect(mapStateToProps, { getUser })(User)

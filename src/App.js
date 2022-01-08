@@ -3,7 +3,7 @@ import MovieList from './containers/MovieList'
 import { SearchBar } from './components/SearchBar'
 import { Switch, Route } from 'react-router-dom'
 import MovieShow from './components/MovieShow'
-import Users from './containers/Users'
+import User from './components/User'
 import Navbar from './components/Navbar'
 import Auth from './components/Auth'
 import { connect } from 'react-redux'
@@ -29,7 +29,7 @@ function App({ user, autoLogin }) {
               <MovieList />
             </Route>
             <Route path='/users/:id'>
-              <Users />
+              <User />
             </Route>
           </Switch>
         </div>

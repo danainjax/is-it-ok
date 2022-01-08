@@ -9,7 +9,7 @@ const initialState = {
 
 export default function AccountReducer(state = initialState, action) {
   switch (action.type) {
-    case 'GET_USERS':
+    case 'GET_USER':
       return {
         ...state,
         users: action.payload,
