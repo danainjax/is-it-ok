@@ -26,9 +26,15 @@ export const submitReview = (review, movieId) => {
         'Authorization': localStorage.token,
       },
       body: JSON.stringify(review),
+    }).then((response) => {
+      if (response.ok) {
+        response
+          .json()
+          .then((review) => dispatch({ type: 'ADD_REVIEW', payload: review }))
+      } else {
+        response.json().then((response) => alert(response.errors))
+      }
     })
-      .then((res) => res.json())
-      .then((review) => dispatch({ type: 'ADD_REVIEW', payload: review }))
 }
 
 // export const mostPopular = () => {

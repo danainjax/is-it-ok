@@ -6,7 +6,6 @@ export const getUsers = () => {
 }
 
 export const submitSignup = (user) => {
-  console.log(user)
   return (dispatch) =>
     fetch('http://localhost:3000/users', {
       method: 'POST',
@@ -56,10 +55,8 @@ function handleUserResponse(res, dispatch) {
 }
 
 export const logout = () => {
-  console.log(logout)
   return (dispatch) => {
     localStorage.clear()
-    console.log('logging out action')
     dispatch({ type: 'LOGOUT' })
   }
 }
