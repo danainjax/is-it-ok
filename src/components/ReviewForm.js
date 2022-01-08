@@ -1,4 +1,3 @@
-import { stepContentClasses } from '@mui/material'
 import { useState } from 'react'
 import { connect } from 'react-redux'
 import { submitReview } from '../redux/actions/MovieActions'

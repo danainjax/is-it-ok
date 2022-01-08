@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { logout } from '../redux/actions/AccountActions'
 
@@ -22,7 +22,9 @@ function Navbar({ logout, user }) {
           <NavLink to='/search'>search</NavLink>
         </li>
         <li>
-          <button onClick={logout}>logout </button>
+          <Link to='/' onClick={logout}>
+            logout
+          </Link>
         </li>
       </ul>
     </div>
