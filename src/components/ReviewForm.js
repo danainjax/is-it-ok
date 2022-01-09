@@ -30,10 +30,10 @@ function ReviewForm({ movieId, submitReview }) {
 
   return (
     <>
-      <form className='form' onSubmit={onSubmit}>
-        <h1>Review form</h1>
+      <form className='form-box' onSubmit={onSubmit}>
+        <h5 className='review'>write a review</h5>
         <label>
-          Rating:
+          Stars
           <input
             type='number'
             name='rating'
@@ -45,46 +45,52 @@ function ReviewForm({ movieId, submitReview }) {
         </label>
         <br />
         <label>
-          Sex:
+          Sex
           <input
             type='textarea'
             name='sex'
             onChange={(e) => setSex(e.target.value)}
             value={sex}
+            placeholder='sex'
           />
         </label>
         <br />
         <label>
-          Language:
+          Language
           <input
             type='textarea'
             name='language'
             onChange={(e) => setLanguage(e.target.value)}
             value={language}
+            placeholder='language'
           />
         </label>
         <br />
         <label>
-          Violence:
+          Violence
           <input
             type='textarea'
             name='violence'
             onChange={(e) => setViolence(e.target.value)}
             value={violence}
+            placeholder='violence'
           />
         </label>
         <br />
         <label>
-          Comment:
+          Comment
           <input
             type='textarea'
             name='comment'
             onChange={(e) => setComment(e.target.value)}
             value={comment}
+            placeholder='tell other families what you think'
           />
         </label>
         <br />
-        <input type='submit' value='Submit' />
+        <button className='submit-btn' type='submit'>
+          Post my review
+        </button>
       </form>
     </>
   )
