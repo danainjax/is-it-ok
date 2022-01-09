@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { connect } from 'react-redux'
 import { submitReview } from '../redux/actions/MovieActions'
 
-function ReviewForm({ movieId, submitReview }) {
+function ReviewForm({ movieId, submitReview, movie }) {
   const [rating, setRating] = useState(5)
   const [sex, setSex] = useState('')
   const [language, setLanguage] = useState('')
@@ -31,7 +31,7 @@ function ReviewForm({ movieId, submitReview }) {
   return (
     <>
       <form className='form-box' onSubmit={onSubmit}>
-        <h5 className='review'>write a review</h5>
+        <h5 className='review'>Write a review of {movie.title}</h5>
         <label>
           Stars
           <input
@@ -96,6 +96,9 @@ function ReviewForm({ movieId, submitReview }) {
   )
 }
 
-const mapStateToProps = (state) => ({ movieId: state.movieStore.movie.id })
+const mapStateToProps = (state) => ({
+  movieId: state.movieStore.movie.id,
+  movie: state.movieStore.movie,
+})
 
 export default connect(mapStateToProps, { submitReview })(ReviewForm)
