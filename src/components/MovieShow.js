@@ -35,7 +35,9 @@ function MovieShow({
       <div className='movie-show'>
         <h1>{title}</h1>
         <img className='movie-show' src={image} alt={title} />
+        <button className='submit-btn'>write a review of {title} </button>
       </div>
+
       <div className='movie-details'>
         <p>imdb rating: {imdbRating}</p>
         <p>rank: {rank}</p>
