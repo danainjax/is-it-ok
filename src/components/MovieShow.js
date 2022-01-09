@@ -5,7 +5,7 @@ import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import Loader from 'react-loader-spinner'
 import ReviewList from '../containers/ReviewList'
 import ReviewForm from './ReviewForm'
-import '../show.css'
+import '../style.css'
 
 import { useEffect } from 'react'
 
