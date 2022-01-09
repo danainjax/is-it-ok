@@ -96,13 +96,12 @@ li a:hover:not(.active) {
 }
 
 .review-form {
-  width: 50%;
-  height: 50%;
+  width: 75%;
+  height: 75%;
 }
 
 .form-box {
   min-width: 100%;
-  height: 100vh;
   border: dotted 3vw #aa7604;
   margin: 10px 10px 10px 10px;
   padding: 5vw;
@@ -117,6 +116,7 @@ li a:hover:not(.active) {
   text-align: left;
   color: whitesmoke;
   margin: 0 0 0.5vh 0;
+  padding: 20px, 20px;
 }
 
 .form-box label {
@@ -130,20 +130,17 @@ li a:hover:not(.active) {
 textarea {
   display: block;
   width: 100%;
-  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
   margin: 0.9vw 0;
   border: 0;
   border-radius: 5px;
-  font-size: 25px;
-}
-
-.form-box textarea {
-  height: 25vh;
+  font-size: 20px;
+  padding: 5px, 5px;
+  height: 10vh;
 }
 
 .submit-btn {
   display: inline-block;
-  width: 30%;
+  width: 50%;
   height: 2rem;
   color: #aa7604;
   border: 0;
@@ -152,7 +149,7 @@ textarea {
   font-size: 20px;
   position: absolute;
   margin: 1rem 0 1rem 8rem;
-  margin-left: 52%;
+  margin-left: 40%;
   border-radius: 0 20px 20px 0;
 }
 
