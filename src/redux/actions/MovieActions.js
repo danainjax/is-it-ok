@@ -37,14 +37,9 @@ export const submitReview = (review, movieId) => {
     })
 }
 
-// export const mostPopular = () => {
-//   return (dispatch) =>
-//     fetch('https://localhost:3000/popular')
-//       .then((resp) => resp.json())
-//       .then((movies) => dispatch({ type: 'MOST_POPULAR', payload: movies }))
-// }
-
-// work on a fetch to a route that will show the individual movie trailer
-// export const trailer = () => {
-//   return (dispatch) => fetch('')
-// }
+export const getTrailer = (id) => {
+  return (dispatch) =>
+    fetch(`http://localhost:3000/trailers/${id}`)
+      .then((resp) => resp.json())
+      .then((trailer) => dispatch({ type: 'GET_TRAILER', payload: trailer }))
+}

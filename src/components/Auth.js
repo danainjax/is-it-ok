@@ -29,6 +29,7 @@ const Auth = (props) => {
   return (
     <>
       {signup ? <h1>sign up!</h1> : <h1> log in!</h1>}
+
       <form onSubmit={handleSubmit}>
         <input
           type='text'

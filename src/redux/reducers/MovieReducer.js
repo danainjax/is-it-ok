@@ -11,9 +11,19 @@ const initialMovie = {
   rank: '',
 }
 
+const initialTrailer = {
+  ttID: '',
+  id: '',
+  title: '',
+  videoTitle: '',
+  videoDescription: '',
+  linkEmbed: '',
+}
+
 const initialState = {
   movies: [],
   movie: initialMovie,
+  trailer: initialTrailer,
 }
 
 export function MovieReducer(state = initialState, action) {
@@ -40,6 +50,9 @@ export function MovieReducer(state = initialState, action) {
           reviews: [action.payload, ...state.movie.reviews],
         },
       }
+
+    case 'GET_TRAILER':
+      return { ...state, trailer: action.payload }
 
     default:
       return { ...state }

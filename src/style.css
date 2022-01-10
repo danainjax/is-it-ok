@@ -78,6 +78,7 @@ li a:hover:not(.active) {
   width: 50%;
   height: auto;
   border-radius: 5%;
+  background-color: magenta;
 }
 
 .movie-show:hover,
@@ -93,49 +94,55 @@ li a:hover:not(.active) {
   margin: 10px;
   font-size: larger;
   width: 100%;
+  background-color: mediumpurple;
 }
 
 .review-form {
-  width: 75%;
-  height: 75%;
+  width: 400px;
+  height: auto;
+  margin: auto;
+  padding-left: 50%;
+  background-color: red;
 }
 
 .form-box {
-  min-width: 100%;
+  width: 500px;
   border: dotted 3vw #aa7604;
   margin: 10px 10px 10px 10px;
-  padding: 5vw;
   position: relative;
   box-sizing: border-box;
   margin: 0;
-  padding: 30px 30px 30px 30px;
+  background-color: lightblue;
 }
 
-.form-box h5 {
+.form-box h4 {
   font-size: 25px;
-  text-align: left;
+  text-align: center;
   color: whitesmoke;
   margin: 0 0 0.5vh 0;
   padding: 20px, 20px;
+  background-color: lightcoral;
 }
 
 .form-box label {
   display: block;
   text-align: center;
   font-size: 20px;
+  border-radius: 5px;
   margin: 0 0 2vh 0;
+  background-color: lightgreen;
 }
 
 .form-box input,
 textarea {
   display: block;
   width: 100%;
-  margin: 0.9vw 0;
+  margin: 10px 0px 10px;
   border: 0;
   border-radius: 5px;
   font-size: 20px;
-  padding: 5px, 5px;
   height: 10vh;
+  background-color: lightpink;
 }
 
 .submit-btn {

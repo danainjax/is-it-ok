@@ -1,11 +1,12 @@
 import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { getMovie, clearMovie } from '../redux/actions/MovieActions'
+import { getMovie, clearMovie, getTrailer } from '../redux/actions/MovieActions'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import Loader from 'react-loader-spinner'
 import ReviewList from '../containers/ReviewList'
 import ReviewForm from './ReviewForm'
 import '../style.css'
+import Trailer from './Trailer'
 
 import { useEffect } from 'react'
 
@@ -22,13 +23,14 @@ function MovieShow({
   image,
   year,
   stars,
+  getTrailer,
 }) {
   const routeId = useParams().id
 
   useEffect(() => {
     getMovie(routeId)
     return clearMovie
-  }, [getMovie, routeId, clearMovie])
+  }, [getMovie, routeId, clearMovie, getTrailer])
 
   const loadedMovie = () => (
     <>
@@ -37,8 +39,17 @@ function MovieShow({
         <img className='movie-show' src={image} alt={title} />
         <button className='submit-btn'>write a review of {title} </button>
       </div>
-
+      {/* <Trailer /> */}
       <div className='movie-details'>
+        <iframe
+          src='https://www.imdb.com/video/imdb/vi2959588889/imdb/embed'
+          // src={movie.trailer}
+          title='Inception'
+          // title={title}
+          width='100%'
+          height='100%'
+        ></iframe>
+
         <p>imdb rating: {imdbRating}</p>
         <p>rank: {rank}</p>
         <p> crew: {crew}</p>
@@ -65,7 +76,12 @@ function MovieShow({
 }
 
 const mapStateToProps = (state) => {
-  return { ...state.movieStore.movie }
+  return {
+    ...state.movieStore.movie,
+    // trailer: { ...state.movieStore.trailer },
+  }
 }
 
-export default connect(mapStateToProps, { getMovie, clearMovie })(MovieShow)
+export default connect(mapStateToProps, { getMovie, clearMovie, getTrailer })(
+  MovieShow
+)

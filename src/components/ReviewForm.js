@@ -31,7 +31,7 @@ function ReviewForm({ movieId, submitReview, movie }) {
   return (
     <>
       <form className='form-box' onSubmit={onSubmit}>
-        <h5 className='review'>Write a review of {movie.title}</h5>
+        <h4 className='review'>Write a review of {movie.title}</h4>
         <label>
           Stars
           <input
