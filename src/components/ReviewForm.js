@@ -32,9 +32,10 @@ function ReviewForm({ movieId, submitReview, movie }) {
     <>
       <form className='form-box' onSubmit={onSubmit}>
         <h4 className='review'>Write a review of {movie.title}</h4>
-        <label>
+        <label id='star-label'>
           Stars
           <input
+            id='stars'
             type='number'
             name='rating'
             min='1'
