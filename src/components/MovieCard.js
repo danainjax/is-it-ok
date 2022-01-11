@@ -12,7 +12,7 @@ function MovieCard({ id, image, title, stars, year, rank }) {
           <div className='container'>
             <h4>
               <Link style={{ textDecoration: 'none' }} to={`/movies/${id}`}>
-                <b>{title}</b>
+                <h4>{title}</h4>
               </Link>
             </h4>
           </div>
