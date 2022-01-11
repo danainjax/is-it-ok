@@ -5,6 +5,7 @@ Build notes:
 [4] Implement a search bar feature
 [5] Create an icon for the browser for movie safe
 [6] Create a logo for movie safe on Canva
+[7] Edit and delete functionality on reviews
 
 # Requirements [ 11/12 ]
 
