@@ -36,7 +36,7 @@ function MovieShow({
     <>
       <div className='movie-show'>
         <h1>{title}</h1>
-        <img className='movie-show' src={image} alt={title} />
+        <img className='image-movie-show' src={image} alt={title} />
         <button className='submit-btn'>write a review of {title} </button>
       </div>
       {/* <Trailer /> */}
@@ -57,7 +57,7 @@ function MovieShow({
       <div className='review-form'>
         <ReviewForm />
       </div>
-      <div className='review-card'>
+      <div className='review-list'>
         <ReviewList />
       </div>
     </>

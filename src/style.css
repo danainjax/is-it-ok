@@ -75,10 +75,14 @@ li a:hover:not(.active) {
   /* border-radius: 10px 10px 0 0; */
   display: block;
   border: 10px;
-  width: 50%;
+  width: 25%;
   height: auto;
   border-radius: 5%;
-  background-color: magenta;
+  background-color: black;
+}
+.image-movie-show {
+  width: 100%;
+  padding: 2px 0px 2px 0px;
 }
 
 .movie-show:hover,
@@ -87,32 +91,48 @@ li a:hover:not(.active) {
   box-shadow: 0 20px 16px 0 rgb(245, 241, 241);
 }
 
-.review-card,
 .movie-details {
   border: 1px solid;
   border-radius: 5px;
   margin: 10px;
   font-size: larger;
   width: 100%;
-  background-color: mediumpurple;
+  background-color: black;
+}
+
+.review-card {
+  margin: 10px;
+  font-size: larger;
+  width: 100%;
+  background-color: black;
+  flex: 0 1 24%;
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+  display: flexbox;
+}
+
+.review-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  border-radius: 5px;
 }
 
 .review-form {
-  width: 400px;
   height: auto;
   margin: auto;
-  padding-left: 50%;
-  background-color: red;
 }
 
 .form-box {
-  width: 500px;
-  border: dotted 3vw #aa7604;
+  width: 40%;
+  border: 2px black;
   margin: 10px 10px 10px 10px;
   position: relative;
   box-sizing: border-box;
-  margin: 0;
-  background-color: lightblue;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: black;
 }
 
 .form-box h4 {
@@ -121,7 +141,6 @@ li a:hover:not(.active) {
   color: whitesmoke;
   margin: 0 0 0.5vh 0;
   padding: 20px, 20px;
-  background-color: lightcoral;
 }
 
 .form-box label {
@@ -130,19 +149,17 @@ li a:hover:not(.active) {
   font-size: 20px;
   border-radius: 5px;
   margin: 0 0 2vh 0;
-  background-color: lightgreen;
 }
 
 .form-box input,
 textarea {
   display: block;
   width: 100%;
-  margin: 10px 0px 10px;
+  margin: 0;
   border: 0;
   border-radius: 5px;
   font-size: 20px;
-  height: 10vh;
-  background-color: lightpink;
+  height: 5vh;
 }
 
 .submit-btn {

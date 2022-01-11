@@ -3,11 +3,11 @@ import ReviewCard from '../components/Review.Card.js'
 
 function ReviewList({ reviews }) {
   return (
-    <div>
+    <>
       {reviews.map((review) => (
         <ReviewCard {...review} key={review.id} />
       ))}
-    </div>
+    </>
   )
 }
 
