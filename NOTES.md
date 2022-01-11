@@ -36,7 +36,6 @@ Build notes:
 [ ] 5-SearchBar
 [X] 6-Navbar
 [X] 7-Auth
-[X] 8-Navbar
 [X] 9-User
 
 [ ] There should be 3 routes, good rule for back end and your front end
