@@ -34,29 +34,31 @@ function MovieShow({
 
   const loadedMovie = () => (
     <>
-      <div className='movie-show'>
-        <h1>{title}</h1>
-        <img className='image-movie-show' src={image} alt={title} />
-        <button className='submit-btn'>write a review of {title} </button>
-      </div>
+      <section>
+        <div className='movie-show'>
+          <h1>{title}</h1>
+          <img className='image-movie-show' src={image} alt={title} />
+          {/* <button className='submit-btn'>write a review of {title} </button> */}
+        </div>
+
+        <div className='review-form'>
+          <ReviewForm />
+        </div>
+      </section>
       {/* <Trailer /> */}
       <div className='movie-details'>
-        <iframe
+        <p>imdb rating: {imdbRating}</p>
+        <p>rank: {rank}</p>
+        <p> crew: {crew}</p>
+      </div>
+      {/* <iframe
           src='https://www.imdb.com/video/imdb/vi2959588889/imdb/embed'
           // src={movie.trailer}
           title='Inception'
           // title={title}
           width='100%'
           height='100%'
-        ></iframe>
-
-        <p>imdb rating: {imdbRating}</p>
-        <p>rank: {rank}</p>
-        <p> crew: {crew}</p>
-      </div>
-      <div className='review-form'>
-        <ReviewForm />
-      </div>
+        ></iframe> */}
       <div className='review-list'>
         <ReviewList />
       </div>
