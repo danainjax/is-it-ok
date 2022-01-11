@@ -84,7 +84,8 @@ li a:hover:not(.active) {
   width: 100%;
   padding: 2px 0px 2px 0px;
 }
-
+b:hover,
+.form-box:hover,
 .movie-show:hover,
 .review-card:hover,
 .movie-details:hover {
