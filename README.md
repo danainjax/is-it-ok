@@ -39,6 +39,10 @@ Clone the front end code down to your machine.
 `npm install`</br>
 `npm start`</br>
 
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
 Author:
 
 _Dana Pughakoff_
