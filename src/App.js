@@ -1,6 +1,6 @@
 import './style.css'
 import MovieList from './containers/MovieList'
-import { SearchBar } from './components/SearchBar'
+import SearchBar from './components/SearchBar'
 import { Switch, Route } from 'react-router-dom'
 import MovieShow from './components/MovieShow'
 import User from './components/User'
@@ -19,7 +19,7 @@ function App({ user, autoLogin }) {
       <Navbar />
       {user.name ? (
         <div>
-          <SearchBar />
+          {/* <SearchBar /> */}
           <Switch>
             {/* go from most specific to least specific for routes */}
             <Route path='/movies/:id'>
@@ -30,6 +30,9 @@ function App({ user, autoLogin }) {
             </Route>
             <Route path='/users/:id'>
               <User />
+            </Route>
+            <Route path='/search'>
+              <SearchBar />
             </Route>
           </Switch>
         </div>
