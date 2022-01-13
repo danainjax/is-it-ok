@@ -14,30 +14,30 @@ Reviews for parents and kids. Check and see if the movie is safe to watch.
 
 ## back end
 
-Grab the back end repo and clone it down to your machine.
+<p>Grab the back end repo and clone it down to your machine.
 
-[movie safe api](https://github.com/danainjax/movie-safe-api)
+[movie safe api](https://github.com/danainjax/movie-safe-api)![pointer](/public/arrow.png)
 
-You will need an API key for IMDB-API.
-https://imdb-api.com/Identity/Account/Register
+You will need an API key for IMDB-API.</br>
+https://imdb-api.com/Identity/Account/Register</br>
 
-- After you have your key, create a `.env` file in the root directory of the back end on your machine.
+After you have your key, create a `.env` file in the root directory of the back end on your machine.</br>
 
-- Create an environment variable and set it equal to the key you received from the IMDB-API site.
-  `REACT_APP_IMDB_API_KEY="api key"`
+Create an environment variable and set it equal to the key you received from the IMDB-API site. </br>
+`REACT_APP_IMDB_API_KEY="api key"`</br>
 
-- Run `rails db:create`
+`rails db:create`</br>
 
-- `rails db:seed`
+`rails db:seed`</br>
 
-- `rails s`
+`rails s`</br> </p>
 
 ## for the front end
 
 Clone the front end code down to your machine.
 
-`npm install`
-`npm start`
+`npm install`</br>
+`npm start`</br>
 
 Author:
 
