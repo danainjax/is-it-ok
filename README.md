@@ -2,7 +2,7 @@
 
 Reviews for parents and kids. Check and see if the movie is safe to watch.
 
-## React Front end for movie safe application
+## React front end for movie safe application
 
 ## built with:
 
