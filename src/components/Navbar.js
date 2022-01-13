@@ -9,15 +9,15 @@ function Navbar({ logout, user }) {
         <li>
           <NavLink to='/movies'>movies</NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink to='/movies'>now playing</NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink to={`/users/${user.name}`}>my account</NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink to='/reviews'>reviews</NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink to='/search'>search</NavLink>
         </li>

@@ -19,19 +19,20 @@ const Auth = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(username, email, password)
-    history.push('/movies')
 
     signup
       ? props.submitSignup({ name: username, password, email })
       : props.submitLogin({ name: username, password })
+    history.push('/movies')
   }
 
   return (
     <>
-      {signup ? <h1>sign up!</h1> : <h1> log in!</h1>}
+      {signup ? <h1>sign up</h1> : <h1> log in</h1>}
 
       <form onSubmit={handleSubmit}>
         <input
+          className='login'
           type='text'
           name='username'
           value={username}
@@ -41,6 +42,7 @@ const Auth = (props) => {
 
         {signup && (
           <input
+            className='login'
             type='text'
             name='email'
             onChange={(e) => setEmail(e.target.value)}
@@ -50,17 +52,23 @@ const Auth = (props) => {
         )}
 
         <input
+          className='login'
           type='password'
           name='password'
           onChange={(e) => setPassword(e.target.value)}
           value={password}
           placeholder='password'
         />
+        <Button variant='contained' type='submit'>
+          submit
+        </Button>
 
-        <Button variant='contained' type='submit' onClick={toggleSignup}>
-          {signup ? 'sign up' : 'log in'}
+        <Button variant='contained' onClick={toggleSignup}>
+          or...
+          {signup ? 'log in' : 'sign up'}
         </Button>
       </form>
+      <div className='background'></div>
     </>
   )
 }

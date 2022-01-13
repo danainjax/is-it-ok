@@ -29,7 +29,7 @@ export const autoLogin = () => {
 
 export const submitLogin = (user) => {
   return (dispatch) =>
-    fetch('https://localhost3000/sessions', {
+    fetch('http://localhost:3000/sessions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -60,5 +60,3 @@ export const logout = () => {
     dispatch({ type: 'LOGOUT' })
   }
 }
-
-

@@ -6,7 +6,7 @@ import Loader from 'react-loader-spinner'
 import ReviewList from '../containers/ReviewList'
 import ReviewForm from './ReviewForm'
 import '../style.css'
-import Trailer from './Trailer'
+// import Trailer from './Trailer'
 
 import { useEffect } from 'react'
 
