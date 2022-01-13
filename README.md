@@ -37,6 +37,7 @@ Create an environment variable and set it equal to the key you received from the
 Clone the front end code down to your machine.
 
 `npm install`</br>
+
 `npm start`</br>
 
 ## Contributing
