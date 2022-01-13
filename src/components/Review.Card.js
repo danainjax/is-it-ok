@@ -1,7 +1,10 @@
 import { connect } from 'react-redux'
+import ReviewList from '../containers/ReviewList'
+import { deleteReview } from '../redux/actions/MovieActions'
 
 function Review({
   name,
+  id,
   rating,
   sex,
   violence,
@@ -9,10 +12,17 @@ function Review({
   comment,
   movieId,
   movie,
+  deleteReview,
+  reviews,
 }) {
+  const onSubmit = (e) => {
+    e.preventDefault()
+    deleteReview(id)
+  }
+
   return (
     <div className='review-card'>
-      <button onClick={() => console.log('delete')}>X</button>
+      <button onClick={onSubmit}>X</button>
       <p>
         {name} rates it: {rating} ⭐stars
       </p>
@@ -27,6 +37,7 @@ function Review({
 const mapStateToProps = (state) => ({
   movieId: state.movieStore.movie.id,
   movie: state.movieStore.movie,
+  reviews: state.movieStore.movie.reviews,
 })
 
-export default connect(mapStateToProps)(Review)
+export default connect(mapStateToProps, { deleteReview, ReviewList })(Review)

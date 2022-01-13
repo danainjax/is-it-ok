@@ -16,18 +16,17 @@ export const getMovie = (id) => {
 
 export const clearMovie = () => ({ type: 'CLEAR_MOVIE' })
 
-// export const deleteReview = (movieId, reviewId) => {
-//   console.log('delete review action triggered')
-//   return (dispatch) => {
-//     fetch(`http://localhost:3000/movies/${movieId}/reviews/${reviewId}`, {
-//       method: 'DELETE',
-//       headers: {
-//         'Content-Type': 'application/json',
-//         'Authorization': localStorage.token,
-//       },
-//     })
-//   }
-// }
+export const deleteReview = (id) => {
+  console.log(id)
+  console.log('delete review action triggered')
+  return (dispatch) => {
+    fetch(`http://localhost:3000/reviews/${id}`, {
+      method: 'DELETE',
+    })
+      .then((res) => res.json())
+      .then((review) => dispatch({ type: 'DELETE_REVIEW', payload: review }))
+  }
+}
 
 export const submitReview = (review, movieId) => {
   console.log('submit review action')
