@@ -1,11 +1,7 @@
 Build notes:
-[1] Write HTML/CSS for the review cards review form
-[2] Pull through more movie data on the show page. (addtl fetch with ttId)
-[3] Fix account creation/submit feature
-[4] Implement a search bar feature
-[5] Create an icon for the browser for movie safe
-[6] Create a logo for movie safe on Canva
-[7] Edit and delete functionality on reviews
+[1] Edit and delete functionality on reviews
+[2] Implement a search bar feature
+[3] Pull through more movie data on the show page. (addtl fetch with ttId)
 
 # Requirements [ 11/12 ]
 
@@ -42,7 +38,7 @@ Build notes:
 [X] /movies
 [X] /movies/:id
 [ ] /me set up this account route
-[X] /users/:id
+[X] /users/${username}
 
 [X] The Application must make use of react-router and proper RESTful routing (should you choose to use react-router v3 please refer to the appropriate docs (Links to an external site.); docs for v4 can be found here (Links to an external site.)) \*see restular.com
 
