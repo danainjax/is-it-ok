@@ -4,13 +4,13 @@ Reviews for parents and kids. Check and see if the movie is safe to watch.
 
 ## React Front end for movie safe application
 
-## Built with:
+## built with:
 
 - React, Redux, Thunk, JavaScript, CSS, Ruby on Rails.
 
 ![moviesafe](public/movie_safe.png)
 
-## Deployment - Dependencies
+## deployment - dependencies
 
 ## back end
 
@@ -40,7 +40,7 @@ Clone the front end code down to your machine.
 
 `npm start`</br>
 
-## Contributing
+## contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
