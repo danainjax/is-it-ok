@@ -16,8 +16,10 @@ function Review({
   reviews,
 }) {
   const onSubmit = (e) => {
+    console.log(movieId)
+    console.log(id)
     e.preventDefault()
-    deleteReview(id)
+    deleteReview(movieId, id)
   }
 
   return (

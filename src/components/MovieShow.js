@@ -1,6 +1,11 @@
 import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { getMovie, clearMovie, getTrailer } from '../redux/actions/MovieActions'
+import {
+  getMovie,
+  clearMovie,
+  getTrailer,
+  deleteReview,
+} from '../redux/actions/MovieActions'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import Loader from 'react-loader-spinner'
 import ReviewList from '../containers/ReviewList'
@@ -24,13 +29,14 @@ function MovieShow({
   year,
   stars,
   getTrailer,
+  deleteReview,
 }) {
   const routeId = useParams().id
 
   useEffect(() => {
     getMovie(routeId)
     return clearMovie
-  }, [getMovie, routeId, clearMovie, getTrailer])
+  }, [getMovie, routeId, clearMovie, getTrailer, deleteReview])
 
   const loadedMovie = () => (
     <>
@@ -80,10 +86,14 @@ function MovieShow({
 const mapStateToProps = (state) => {
   return {
     ...state.movieStore.movie,
+    reviews: state.movieStore.movie.reviews,
     // trailer: { ...state.movieStore.trailer },
   }
 }
 
-export default connect(mapStateToProps, { getMovie, clearMovie, getTrailer })(
-  MovieShow
-)
+export default connect(mapStateToProps, {
+  getMovie,
+  clearMovie,
+  getTrailer,
+  deleteReview,
+})(MovieShow)
