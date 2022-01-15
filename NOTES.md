@@ -1,5 +1,5 @@
 Build notes:
-[1] Edit and delete functionality on reviews - working on changing UI when review is deleted
+[1] Edit reviews
 [2] Implement a search bar feature
 [3] Pull through more movie data on the show page. (addtl fetch with ttId)
 
