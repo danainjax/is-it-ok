@@ -39,6 +39,7 @@ function Review({
 const mapStateToProps = (state) => ({
   movieId: state.movieStore.movie.id,
   movie: state.movieStore.movie,
+  ...state,
   reviews: state.movieStore.movie.reviews,
 })
 
