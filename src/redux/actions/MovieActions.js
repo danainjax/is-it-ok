@@ -16,11 +16,11 @@ export const getMovie = (id) => {
 
 export const clearMovie = () => ({ type: 'CLEAR_MOVIE' })
 
-export const deleteReview = (id) => {
-  console.log(id)
+export const deleteReview = (movieId, id) => {
+  console.log(movieId, id)
   console.log('delete review action triggered')
   return (dispatch) => {
-    fetch(`http://localhost:3000/reviews/${id}`, {
+    fetch(`http://localhost:3000/movies/${movieId}/reviews/${id}`, {
       method: 'DELETE',
     })
       .then((res) => res.json())

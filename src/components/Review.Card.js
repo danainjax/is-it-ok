@@ -16,8 +16,10 @@ function Review({
   reviews,
 }) {
   const onSubmit = (e) => {
+    console.log(movieId)
+    console.log(id)
     e.preventDefault()
-    deleteReview(id)
+    deleteReview(movieId, id)
   }
 
   return (
@@ -37,6 +39,7 @@ function Review({
 const mapStateToProps = (state) => ({
   movieId: state.movieStore.movie.id,
   movie: state.movieStore.movie,
+  ...state,
   reviews: state.movieStore.movie.reviews,
 })
 
