@@ -51,6 +51,18 @@ export function MovieReducer(state = initialState, action) {
         },
       }
 
+    case 'EDIT_REVIEW':
+      let allReviews = state.movie.reviews.filter(
+        (review) => review.id !== action.payload
+      )
+      return {
+        ...state,
+        movie: {
+          ...state.movie,
+          reviews: [action.payload, ...allReviews],
+        },
+      }
+
     case 'DELETE_REVIEW':
       return {
         ...state,

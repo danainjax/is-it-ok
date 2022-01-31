@@ -28,6 +28,25 @@ export const deleteReview = (movieId, id) => {
   }
 }
 
+export const editReview = (movieId, id, review) => {
+  console.log(movieId, id)
+  console.log('edit review action triggered')
+  return (dispatch) => {
+    fetch(`http://localhost:3000/movies/${movieId}/reviews/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': localStorage.token,
+      },
+      body: JSON.stringify(review),
+    })
+      .then((res) => res.json())
+      .then((updReview) =>
+        dispatch({ type: 'EDIT_REVIEW', payload: updReview })
+      )
+  }
+}
+
 export const submitReview = (review, movieId) => {
   console.log('submit review action')
   return (dispatch) =>

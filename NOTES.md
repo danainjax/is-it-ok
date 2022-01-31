@@ -1,5 +1,5 @@
 Build notes:
-[1] Edit reviews
+[1] Edit reviews working on rendering the edit review form
 [2] Implement a search bar feature
 [3] Pull through more movie data on the show page. (addtl fetch with ttId)
 
