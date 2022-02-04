@@ -57,14 +57,7 @@ function MovieShow({
         <p>rank: {rank}</p>
         <p> crew: {crew}</p>
       </div>
-      {/* <iframe
-          src='https://www.imdb.com/video/imdb/vi2959588889/imdb/embed'
-          // src={movie.trailer}
-          title='Inception'
-          // title={title}
-          width='100%'
-          height='100%'
-        ></iframe> */}
+
       <div className='review-list'>
         <ReviewList />
       </div>
