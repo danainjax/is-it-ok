@@ -68,9 +68,9 @@ export const submitReview = (review, movieId) => {
     })
 }
 
-export const getTrailer = (id) => {
+export const getTrailer = (ttID) => {
   return (dispatch) =>
-    fetch(`http://localhost:3000/trailers/${id}`)
+    fetch(`http://localhost:3000/trailers/${ttID}`)
       .then((resp) => resp.json())
       .then((trailer) => dispatch({ type: 'GET_TRAILER', payload: trailer }))
 }
