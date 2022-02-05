@@ -35,6 +35,7 @@ function MovieShow({
 
   useEffect(() => {
     getMovie(routeId)
+    // getTrailer(ttId)
     return clearMovie
   }, [getMovie, routeId, clearMovie, getTrailer, deleteReview])
 
@@ -51,7 +52,10 @@ function MovieShow({
           <ReviewForm />
         </div>
       </section>
-      <Trailer />
+      <div className='trailer'>
+        <Trailer ttId={ttId} />
+      </div>
+
       <div className='movie-details'>
         <p>imdb rating: {imdbRating}</p>
         <p>rank: {rank}</p>

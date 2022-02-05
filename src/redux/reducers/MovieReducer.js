@@ -12,7 +12,7 @@ const initialMovie = {
 }
 
 const initialTrailer = {
-  ttID: '',
+  ttId: '',
   id: '',
   title: '',
   videoTitle: '',

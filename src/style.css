@@ -209,3 +209,7 @@ textarea {
   background-color: #cccccc;
   background-image: repeating-linear-gradient(blue, teal, lavender);
 }
+
+.trailer {
+  height: 500px;
+}
