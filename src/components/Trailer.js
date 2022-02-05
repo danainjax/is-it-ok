@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { getTrailer } from '../redux/actions/MovieActions'
+import '../style.css'
 
 function Trailer({ trailer, ttId, getTrailer }) {
   useEffect(() => {
@@ -9,21 +10,19 @@ function Trailer({ trailer, ttId, getTrailer }) {
   }, [ttId, getTrailer])
   console.log(trailer)
   return (
-    <>
-      <h1>TRAILERS COMPONENT</h1>
-      <p>Put the trailer here with the linkEmbed</p>
-      <p>{trailer.ttId}</p>
-      <p>{trailer.title}</p>
+    <div className='trailer'>
       <p>{trailer.videoTitle}</p>
-      <iframe
-        src={trailer.linkEmbed}
-        title={trailer.title}
-        width='100%'
-        height='100%'
-        iframe
-      />
+      <div className='iframe-container'>
+        <iframe
+          src={trailer.linkEmbed}
+          title={trailer.title}
+          width='100%'
+          height='100%'
+          iframe
+        />
+      </div>
       <p>{trailer.videoDescription}</p>
-    </>
+    </div>
   )
 }
 
