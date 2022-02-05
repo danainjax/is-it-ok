@@ -12,7 +12,7 @@ const initialMovie = {
 }
 
 const initialTrailer = {
-  ttID: '',
+  ttId: '',
   id: '',
   title: '',
   videoTitle: '',
@@ -48,6 +48,18 @@ export function MovieReducer(state = initialState, action) {
         movie: {
           ...state.movie,
           reviews: [action.payload, ...state.movie.reviews],
+        },
+      }
+
+    case 'EDIT_REVIEW':
+      let allReviews = state.movie.reviews.filter(
+        (review) => review.id !== action.payload
+      )
+      return {
+        ...state,
+        movie: {
+          ...state.movie,
+          reviews: [action.payload, ...allReviews],
         },
       }
 

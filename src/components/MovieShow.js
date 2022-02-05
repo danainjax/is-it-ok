@@ -11,7 +11,7 @@ import Loader from 'react-loader-spinner'
 import ReviewList from '../containers/ReviewList'
 import ReviewForm from './ReviewForm'
 import '../style.css'
-// import Trailer from './Trailer'
+import Trailer from './Trailer'
 
 import { useEffect } from 'react'
 
@@ -35,6 +35,7 @@ function MovieShow({
 
   useEffect(() => {
     getMovie(routeId)
+    // getTrailer(ttId)
     return clearMovie
   }, [getMovie, routeId, clearMovie, getTrailer, deleteReview])
 
@@ -51,20 +52,16 @@ function MovieShow({
           <ReviewForm />
         </div>
       </section>
-      {/* <Trailer /> */}
+      {/* <div className='trailer'> */}
+      <Trailer ttId={ttId} />
+      {/* </div> */}
+
       <div className='movie-details'>
         <p>imdb rating: {imdbRating}</p>
         <p>rank: {rank}</p>
         <p> crew: {crew}</p>
       </div>
-      {/* <iframe
-          src='https://www.imdb.com/video/imdb/vi2959588889/imdb/embed'
-          // src={movie.trailer}
-          title='Inception'
-          // title={title}
-          width='100%'
-          height='100%'
-        ></iframe> */}
+
       <div className='review-list'>
         <ReviewList />
       </div>
@@ -87,7 +84,7 @@ const mapStateToProps = (state) => {
   return {
     ...state.movieStore.movie,
     reviews: state.movieStore.movie.reviews,
-    // trailer: { ...state.movieStore.trailer },
+    trailer: { ...state.movieStore.trailer },
   }
 }
 
