@@ -101,11 +101,15 @@ b:hover,
 }
 
 .movie-details {
+  display: grid;
   border: 1px solid;
   border-radius: 5px;
   margin: 10px;
   font-size: larger;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
   background-color: black;
 }
 
@@ -210,17 +214,27 @@ textarea {
   background-image: repeating-linear-gradient(blue, teal, lavender);
 }
 
-/* iframe-container {
-  overflow: hidden;
-  padding-top: 56.25%;
-  position: relative;
+.trailer {
+  margin: 5px;
+  background-color: #333;
+  display: grid;
+  padding: 5px 100px;
+  justify-content: left;
+  align-content: left;
+  text-align: left;
 }
 
-iframe-container iframe {
+iframe {
+  height: 500px;
+  width: 1000px;
+  /* margin: 10px; */
+  background-color: #333;
+}
+
+iframe-container {
   border: 0;
-  height: 100%;
+  height: auto;
   left: 0;
-  position: absolute;
   top: 0;
-  width: 100%;
-} */
+  width: auto;
+}
