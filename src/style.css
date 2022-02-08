@@ -217,24 +217,20 @@ textarea {
 .trailer {
   margin: 5px;
   background-color: #333;
-  display: grid;
-  padding: 5px 100px;
-  justify-content: left;
-  align-content: left;
-  text-align: left;
+  display: flex;
+  padding: 10px 10px 10px 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 iframe {
   height: 500px;
   width: 1000px;
-  /* margin: 10px; */
-  background-color: #333;
+  border: 0;
+  background-color: black;
 }
 
 iframe-container {
-  border: 0;
-  height: auto;
-  left: 0;
-  top: 0;
-  width: auto;
+  /* experimenting */
 }
