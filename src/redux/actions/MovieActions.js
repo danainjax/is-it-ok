@@ -75,3 +75,13 @@ export const getTrailer = (ttId) => {
       .then((resp) => resp.json())
       .then((trailer) => dispatch({ type: 'GET_TRAILER', payload: trailer }))
 }
+
+export const searchMovie = (searchText) => {
+  console.log('searchText: ', searchText)
+
+  return (dispatch) =>
+    dispatch({
+      type: 'SEARCH_MOVIE',
+      payload: searchText,
+    })
+}

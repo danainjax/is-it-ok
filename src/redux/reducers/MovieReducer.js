@@ -1,3 +1,5 @@
+import searchText from '../../components/SearchBar'
+
 const initialMovie = {
   id: null,
   reviews: [],
@@ -81,5 +83,14 @@ export function MovieReducer(state = initialState, action) {
 
     default:
       return { ...state }
+
+    case 'SEARCH_MOVIE':
+      console.log(action.payload)
+      return {
+        ...state,
+        movies: state.movies.filter((movie) =>
+          movie.title.includes(action.payload)
+        ),
+      }
   }
 }

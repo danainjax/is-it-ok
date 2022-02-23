@@ -1,12 +1,13 @@
 import MovieCard from '../components/MovieCard'
-import { fetchInTheaters } from '../redux/actions/MovieActions'
+import { fetchInTheaters, searchMovie } from '../redux/actions/MovieActions'
 import { connect } from 'react-redux'
 import { useEffect } from 'react'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import Loader from 'react-loader-spinner'
+import SearchBar from '../components/SearchBar'
 
-function MovieList({ fetchInTheaters, movielist }) {
-  useEffect(fetchInTheaters, [fetchInTheaters])
+function MovieList({ fetchInTheaters, movielist, searchMovie }) {
+  useEffect(fetchInTheaters, [fetchInTheaters, searchMovie])
   //dependency, useEffect will run fetchInTheaters if fetchInTheaters changes
 
   const cards = () => (
@@ -34,4 +35,8 @@ const mapStateToProps = (state) => {
   return { movielist: state.movieStore.movies }
 }
 
-export default connect(mapStateToProps, { fetchInTheaters })(MovieList)
+export default connect(mapStateToProps, {
+  fetchInTheaters,
+  searchMovie,
+  SearchBar,
+})(MovieList)
