@@ -52,9 +52,9 @@ function MovieShow({
           <ReviewForm />
         </div>
       </section>
-      {/* <div className='trailer'> */}
-      <Trailer ttId={ttId} />
-      {/* </div> */}
+      <div className='trailer'>
+        <Trailer ttId={ttId} />
+      </div>
 
       <div className='movie-details'>
         <p>imdb rating: {imdbRating}</p>

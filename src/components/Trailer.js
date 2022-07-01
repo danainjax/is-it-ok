@@ -10,7 +10,7 @@ function Trailer({ trailer, ttId, getTrailer }) {
   }, [ttId, getTrailer])
   console.log(trailer)
   return (
-    <div className='trailer'>
+    <>
       <p>{trailer.videoTitle}</p>
       <div className='iframe-container'>
         <iframe
@@ -22,7 +22,7 @@ function Trailer({ trailer, ttId, getTrailer }) {
         />
       </div>
       <p>{trailer.videoDescription}</p>
-    </div>
+    </>
   )
 }
 
